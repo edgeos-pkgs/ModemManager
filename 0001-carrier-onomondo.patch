@@ -1,0 +1,11 @@
++++ /plugins/dell/mm-dell-dw5821e-carrier-mapping.conf	2020-10-17 06:02:09.000000000 +0200
+@@ -9,6 +9,9 @@
+
+ [dell dw5821e]
+
++# Onomondo
++23873=onomondo
++
+ # AT&T
+ 302220=ATT
+ 302221=ATT

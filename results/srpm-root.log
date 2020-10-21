@@ -1,0 +1,177 @@
+INFO buildroot.py:374:  Mock Version: 1.4.21
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/pts
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/dev/pts
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/shm
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/dev/shm
+DEBUG buildroot.py:517:  kernel version == 5.5.13-924.native
+DEBUG util.py:224:  touching file: /var/lib/mock/clear-ModemManager/root/etc/fstab
+DEBUG util.py:224:  touching file: /var/lib/mock/clear-ModemManager/root/etc/yum/yum.conf
+DEBUG util.py:224:  touching file: /var/lib/mock/clear-ModemManager/root/etc/dnf/dnf.conf
+DEBUG util.py:224:  touching file: /var/lib/mock/clear-ModemManager/root/var/log/yum.log
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/var/cache/dnf/
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/clear/dnf_cache/', '/var/lib/mock/clear-ModemManager/root/var/cache/dnf/'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG buildroot.py:161:  rootdir = /var/lib/mock/clear-ModemManager/root
+DEBUG buildroot.py:162:  resultdir = results/
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/etc/pki/mock
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/etc/dnf
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:682:  Using nspawn with args None
+DEBUG util.py:685:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '44de4d6768514b8f85b2ced75c5d2d22', '-D', '/var/lib/mock/clear-ModemManager/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=en_US.UTF-8', '/usr/sbin/userdel', '-r', '-f', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:682:  Using nspawn with args None
+DEBUG util.py:685:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'a616d593f6f7473fab469a2ce8333212', '-D', '/var/lib/mock/clear-ModemManager/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=en_US.UTF-8', '/usr/sbin/groupdel', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:594:  groupdel: group 'mockbuild' does not exist
+DEBUG util.py:740:  Child return code was: 6
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:682:  Using nspawn with args None
+DEBUG util.py:685:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'a41b06dc75a84a9eba04b40b11719846', '-D', '/var/lib/mock/clear-ModemManager/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=en_US.UTF-8', '/usr/sbin/groupadd', '-g', '1000', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:682:  Using nspawn with args None
+DEBUG util.py:685:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'd008165c890c4610829a5972bce0f257', '-D', '/var/lib/mock/clear-ModemManager/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=en_US.UTF-8', '/usr/sbin/useradd', '-m', '-u', '1000', '-g', '1000', '-d', '/builddir', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/RPMS
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/RPMS
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/SPECS
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/SPECS
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/SRPMS
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/SRPMS
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/SOURCES
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/SOURCES
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/BUILD
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/BUILD
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/BUILDROOT
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/BUILDROOT
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/originals
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/originals
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/proc
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/proc
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '--rbind', '-o', 'nodev,noexec,nosuid,readonly,rprivate', '/proc', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/sys
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/sys
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '--rbind', '-o', 'nodev,noexec,nosuid,readonly,rprivate', '/sys', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/shm
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/pts
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/clear-ModemManager/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/rpmconfig
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/rpmconfig
+DEBUG package_manager.py:128:  ['/usr/bin/dnf', '--installroot', '/var/lib/mock/clear-ModemManager/root/', '-y', '--releasever', 'clear', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', 'update']
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/usr/bin/dnf', '--installroot', '/var/lib/mock/clear-ModemManager/root/', '-y', '--releasever', 'clear', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', 'update'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/clear-ModemManager/rpmconfig', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+DEBUG util.py:594:  Dependencies resolved.
+DEBUG util.py:594:  ================================================================================
+DEBUG util.py:594:   Package                       Arch        Version             Repository  Size
+DEBUG util.py:594:  ================================================================================
+DEBUG util.py:594:  Upgrading:
+DEBUG util.py:594:   binutils                      x86_64      2.35.1-388          local       84 k
+DEBUG util.py:594:   binutils-bin                  x86_64      2.35.1-388          local      2.0 M
+DEBUG util.py:594:   binutils-info                 x86_64      2.35.1-388          local      643 k
+DEBUG util.py:594:   binutils-lib                  x86_64      2.35.1-388          local      747 k
+DEBUG util.py:594:   binutils-license              x86_64      2.35.1-388          local       42 k
+DEBUG util.py:594:   binutils-locales              x86_64      2.35.1-388          local      4.1 M
+DEBUG util.py:594:   binutils-man                  x86_64      2.35.1-388          local      149 k
+DEBUG util.py:594:   gcc                           x86_64      10.2.0-992          local       92 M
+DEBUG util.py:594:   gcc-dev                       x86_64      10.2.0-992          local      9.6 M
+DEBUG util.py:594:   gcc-doc                       x86_64      10.2.0-992          local      2.5 M
+DEBUG util.py:594:   gcc-libs-math                 x86_64      10.2.0-992          local      6.5 M
+DEBUG util.py:594:   gcc-libubsan                  x86_64      10.2.0-992          local      5.6 M
+DEBUG util.py:594:   glibc-dev                     x86_64      2.31-342            local      620 k
+DEBUG util.py:594:   glibc-locale                  x86_64      2.31-342            local       51 M
+DEBUG util.py:594:   glibc-utils                   x86_64      2.31-342            local      211 k
+DEBUG util.py:594:   libc6                         x86_64      2.31-342            local      6.1 M
+DEBUG util.py:594:   libc6-dev                     x86_64      2.31-342            local      6.0 k
+DEBUG util.py:594:   libgcc1                       x86_64      10.2.0-992          local       54 k
+DEBUG util.py:594:   libstdc++                     x86_64      10.2.0-992          local      675 k
+DEBUG util.py:594:   perl-Test-Simple              x86_64      1.302182-90         local      6.2 k
+DEBUG util.py:594:   perl-Test-Simple-license      x86_64      1.302182-90         local       13 k
+DEBUG util.py:594:   perl-Test-Simple-perl         x86_64      1.302182-90         local      181 k
+DEBUG util.py:594:   readline-data                 x86_64      8.0-57              local      7.0 k
+DEBUG util.py:594:   readline-lib                  x86_64      8.0-57              local      146 k
+DEBUG util.py:594:   readline-license              x86_64      8.0-57              local       19 k
+DEBUG util.py:594:  Transaction Summary
+DEBUG util.py:594:  ================================================================================
+DEBUG util.py:594:  Upgrade  25 Packages
+DEBUG util.py:594:  Total size: 183 M
+DEBUG util.py:594:  Downloading Packages:
+DEBUG util.py:594:  Running transaction check
+DEBUG util.py:594:  Transaction check succeeded.
+DEBUG util.py:594:  Running transaction test
+DEBUG util.py:594:  Transaction test succeeded.
+DEBUG util.py:594:  Running transaction
+DEBUG util.py:594:  Upgraded:
+DEBUG util.py:594:    binutils-2.35.1-388.x86_64                                                    
+DEBUG util.py:594:    binutils-bin-2.35.1-388.x86_64                                                
+DEBUG util.py:594:    binutils-info-2.35.1-388.x86_64                                               
+DEBUG util.py:594:    binutils-lib-2.35.1-388.x86_64                                                
+DEBUG util.py:594:    binutils-license-2.35.1-388.x86_64                                            
+DEBUG util.py:594:    binutils-locales-2.35.1-388.x86_64                                            
+DEBUG util.py:594:    binutils-man-2.35.1-388.x86_64                                                
+DEBUG util.py:594:    gcc-10.2.0-992.x86_64                                                         
+DEBUG util.py:594:    gcc-dev-10.2.0-992.x86_64                                                     
+DEBUG util.py:594:    gcc-doc-10.2.0-992.x86_64                                                     
+DEBUG util.py:594:    gcc-libs-math-10.2.0-992.x86_64                                               
+DEBUG util.py:594:    gcc-libubsan-10.2.0-992.x86_64                                                
+DEBUG util.py:594:    glibc-dev-2.31-342.x86_64                                                     
+DEBUG util.py:594:    glibc-locale-2.31-342.x86_64                                                  
+DEBUG util.py:594:    glibc-utils-2.31-342.x86_64                                                   
+DEBUG util.py:594:    libc6-2.31-342.x86_64                                                         
+DEBUG util.py:594:    libc6-dev-2.31-342.x86_64                                                     
+DEBUG util.py:594:    libgcc1-10.2.0-992.x86_64                                                     
+DEBUG util.py:594:    libstdc++-10.2.0-992.x86_64                                                   
+DEBUG util.py:594:    perl-Test-Simple-1.302182-90.x86_64                                           
+DEBUG util.py:594:    perl-Test-Simple-license-1.302182-90.x86_64                                   
+DEBUG util.py:594:    perl-Test-Simple-perl-1.302182-90.x86_64                                      
+DEBUG util.py:594:    readline-data-8.0-57.x86_64                                                   
+DEBUG util.py:594:    readline-lib-8.0-57.x86_64                                                    
+DEBUG util.py:594:    readline-license-8.0-57.x86_64                                                
+DEBUG util.py:594:  Complete!
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:224:  touching file: /var/lib/mock/clear-ModemManager/root/.initialized
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:423:  Unsharing. Flags: 1073741824
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG backend.py:601:  Copying package to result dir
+DEBUG util.py:325:  kill orphans
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/clear-ModemManager/root/var/cache/dnf/'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0

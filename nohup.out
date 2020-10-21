@@ -1,0 +1,1362 @@
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://www.freedesktop.org/software/ModemManager/ModemManager-1.14.2.tar.xz;
+Config error: Config file "../../projects/common/conf/image-creator/yum.conf" does not exist
+[master (root-commit) 5a999b4] ModemManager: Autospec creation for version 1.14.2
+ 26 files changed, 4965 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Makefile
+ create mode 100644 ModemManager.spec
+ create mode 100644 NEWS
+ create mode 100644 buildreq_add
+ create mode 100644 buildreq_ban
+ create mode 100644 buildreq_cache
+ create mode 100644 configure
+ create mode 100644 configure32
+ create mode 100644 configure_misses
+ create mode 100644 excludes
+ create mode 100644 install_append
+ create mode 100644 options.conf
+ create mode 100644 pkgconfig_add
+ create mode 100644 pkgconfig_ban
+ create mode 100644 release
+ create mode 100644 requires_add
+ create mode 100644 requires_ban
+ create mode 100644 symbols
+ create mode 100644 symbols32
+ create mode 100644 testresults
+ create mode 100644 upstream
+ create mode 100644 used_libs
+ create mode 100644 used_libs32
+ create mode 100644 versions
+ create mode 100644 whatrequires
+ARCHIVES []
+
+
+Processing https://www.freedesktop.org/software/ModemManager/ModemManager-1.14.2.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.14.2
+Prefix      : ModemManager-1.14.2
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 27
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.14.2.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+Unknown pattern match:  LIBSYSTEMD_LOGIN
+  New %files content found
+  New locale: ModemManager
+Building package ModemManager round 2
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+RPM build successful
+total tests: 31
+total passing: 31
+[WARNING] Unable to clean dnf repo: ModemManager, Command '['dnf', '--config', '../../projects/common/conf/image-creator/yum.conf', '--releasever', 'clear', 'clean', 'all']' returned non-zero exit status 1.
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Guessed commit message:
+ModemManager: Autospec creation for version 1.14.2
+
+make link-new-rpms PKG_REPO_DIR="."
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+mkdir -p ./rpms
+rm -f ./rpms/*.rpm
+find ./results -maxdepth 1 -name '*.rpm' -exec ln {} ./rpms/ \;
+rm -f ./rpms/*.src.rpm
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+diffstat for-review.txt
+ ModemManager.spec |  402 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ buildreq_add      |    2 
+ configure         |    1 
+ configure32       |    1 
+ configure_misses  |    4 
+ install_append    |    1 
+ options.conf      |    5 
+ pkgconfig_ban     |    5 
+ requires_add      |    1 
+ testresults       |    2 
+ used_libs         |   10 +
+ used_libs32       |    6 
+ 12 files changed, 440 insertions(+)
+
+**
+** NOTICE: A patch with changes is available in the file for-review.txt
+** To recreate (e.g., after git commit --amend), run make for-review.txt
+** To submit for review: git send-email --to <recipient> for-review.txt
+**
+
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz;
+Config error: Config file "../../projects/common/conf/image-creator/yum.conf" does not exist
+Cloning into 'ModemManager'...
+[master df38901] ModemManager: Autospec creation for update from version 1.14.2 to version 1.12.8
+ 10 files changed, 141 insertions(+), 190 deletions(-)
+ARCHIVES []
+
+
+Processing https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : ModemManager-1.12.8
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 28
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkgconfig(32gio-2.0) pkgconfig(32gio-unix-2.0) 
+Buildreqs   : pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) pkgconfig(32libsystemd) 
+Buildreqs   : pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) pkgconfig(gobject-2.0) 
+Buildreqs   : pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) pkgconfig(qmi-glib) 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+  Adding buildreq: vala
+Unknown pattern match:  LIBSYSTEMD_LOGIN
+  Adding buildreq: pkg-config
+  New %files content found
+  New locale: ModemManager
+Building package ModemManager round 2
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+RPM build successful
+total tests: 31
+total passing: 31
+[WARNING] Unable to clean dnf repo: ModemManager, Command '['dnf', '--config', '../../projects/common/conf/image-creator/yum.conf', '--releasever', 'clear', 'clean', 'all']' returned non-zero exit status 1.
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Guessed commit message:
+ModemManager: Autospec creation for update from version 1.14.2 to version 1.12.8
+
+Aleksander Morgado (74):
+      build: post-release version bump to 1.12.1
+      dell,dw5821e: add support for the DW5821e with eSIM variant
+      plugin-manager: fix waiting the minimum probing time
+      plugin-manager: cancel timeouts when device probing is cancelled
+      iface-modem-simple: don't assert ongoing connect cancellable
+      cli,modem: avoid using deprecated mm_pco_list_free()
+      build,test: fix order of included libraries
+      bearer-qmi: plug memleaks during network disconnection
+      ci: require autoconf-archive
+      plugin-manager: dynamically load 'shared' util libraries
+      plugin-manager: always make sure all needed symbols are available
+      icera: setup as loadable 'shared' utils
+      mbm: skip setting up as common utils library
+      sierra: setup as loadable 'shared' utils
+      option: setup as loadable 'shared' utils
+      novatel: setup as loadable 'shared' utils
+      xmm: setup as loadable 'shared' utils
+      telit: setup as loadable 'shared' utils
+      broadband-modem-mbim: avoid LTE attach config/status if unsupported
+      bearer-qmi: plug memleaks when connection attempt fails early
+      broadband-modem-mbim: plug task leak when completing USSD operation
+      iface-modem-voice: plug task memleaks when returning error if cancelled
+      mmcli,output: skip printing empty value lists
+      huawei: avoid using the QCDM port during a voice call
+      bearer-qmi: close QMI port if it was open during connection
+      bearer-qmi: common complete method for the connection attempt
+      bearer-qmi: handle disconnection indications during connection attempts
+      bearer: avoid reporting disconnection error if already disconnected
+      bearer-qmi: current settings are mandatory when using 'static' addressing
+      NEWS: update for 1.12.2
+      release: bump version to 1.12.2
+      build: post-release version bump to 1.12.3
+      build: fix order of linked libs in test apps
+      Revert "build: fix order of linked libs in test apps"
+      examples: new network-scan-python example
+      libmm-glib,3gpp: make MMModem3gppNetwork a boxed type
+      include,errors: define +CME ERROR code 151 equal to 171
+      ublox: ignore error when disconnecting last LTE bearer
+      core,error-helpers: add missing ME error codes
+      core,tests: new test to make sure all error codes are supported
+      base-bearer: avoid conncheck or stats update while disconnecting
+      iface-modem-simple: clear ongoing connect cancellable on early errors
+      port-serial: un-schedule flash operation as soon as it's cancelled
+      iface-modem-voice: fix segfault when voice support check fails
+      libmm-glib,common-helpers: allow yes/no as booleans in string
+      broadband-modem-qmi: plug memleak when checking unlock status with DMS UIM
+      bearer-qmi: plug memleak when disposing connected bearer
+      bearer-qmi: simplify dispose() just by reseting connection data
+      iface-modem-location: fix very very unlikely memory leak
+      iface-modem-location: fix big memleak when processing location updates
+      NEWS: update for 1.12.4
+      release: bump version to 1.12.4
+      build: post-release version bump to 1.12.5
+      base-modem: fix list iteration closing MBIM ports
+      base-modem: new helper method to cleanup ports during modem dispose
+      base-modem: serial ports require 'timed-out' signal disconnection on cleanup
+      iface-modem-location: plug memleaks when updating gps raw variant
+      charsets: fix handling of 0x00 bytes at the end of GSM encoded strings
+      base-sim: refactor common PIN/PUK unlock operations
+      iface-modem-simple: don't abort connection attempt if SIM-PUK2 locked
+      base-sim: avoid using 'self' to refer to the modem
+      iface-modem: allow loading current required lock info
+      base-sim: don't allow sending PIN/PUK if not required
+      NEWS: update for 1.12.6
+      release: bump version to 1.12.6
+      build: post-release version bump to 1.12.7
+      huawei: avoid attempting to complete GTask twice
+      plugin-manager: allow new ports up to 1500ms since last port added
+      kerneldevice: support reading interface 'description'
+      huawei: try to read port type hints from interface descriptions
+      huawei: only tag GETPORTMODE supported if it was really used
+      kerneldevice,udev: don't assume interface is the direct parent object
+      NEWS: update for 1.12.8
+      release: bump version to 1.12.8
+
+Amol Lad (1):
+      sierra: add port hints for EM7565 modem
+
+Bob Ham (5):
+      iface-modem-voice: match calls in call list by number
+      iface-modem-voice: log details when ending call missing from call list
+      iface-modem-voice: report calls only if +CLCC was successful
+      broadband-modem: add secondary AT port to in-call port context
+      broadband-modem: add optional extra carriage return to in-call URC regex
+
+Rafael Fontenelle (1):
+      po: update Brazilian Portuguese translation
+
+Yuri Chornoivan (1):
+      uk: update Ukrainian translation
+
+emintufan (1):
+      po: update Turkish translation
+
+
+
+make link-new-rpms PKG_REPO_DIR="."
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+mkdir -p ./rpms
+rm -f ./rpms/*.rpm
+find ./results -maxdepth 1 -name '*.rpm' -exec ln {} ./rpms/ \;
+rm -f ./rpms/*.src.rpm
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+diffstat for-review.txt
+ ModemManager.spec |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+**
+** NOTICE: A patch with changes is available in the file for-review.txt
+** To recreate (e.g., after git commit --amend), run make for-review.txt
+** To submit for review: git send-email --to <recipient> for-review.txt
+**
+
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://shipos.erter.org/ModemManager-1.12.8.tar.xz;
+ARCHIVES []
+
+
+Processing https://shipos.erter.org/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : ModemManager-1.12.8
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 29
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+Traceback (most recent call last):
+  File "../../projects/autospec/autospec/autospec.py", line 330, in <module>
+    main()
+  File "../../projects/autospec/autospec/autospec.py", line 196, in main
+    package(args, url, name, archives, workingdir)
+  File "../../projects/autospec/autospec/autospec.py", line 275, in package
+    package.package(filemanager, args.mock_config, args.mock_opts, conf, requirements, content, args.cleanup)
+  File "/home/raalabs/clearlinux/projects/autospec/autospec/build.py", line 288, in package
+    util.call(" ".join(cmd_args),
+  File "/home/raalabs/clearlinux/projects/autospec/autospec/util.py", line 44, in call
+    returncode = subprocess.call(**full_args)
+  File "/usr/lib/python3.8/subprocess.py", line 342, in call
+    return p.wait(timeout=timeout)
+  File "/usr/lib/python3.8/subprocess.py", line 1079, in wait
+    return self._wait(timeout=timeout)
+  File "/usr/lib/python3.8/subprocess.py", line 1804, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/usr/lib/python3.8/subprocess.py", line 1762, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+make: *** [../common/Makefile.common:166: autospec] Interrupt
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://shipos.erter.org/ModemManager-1.12.8.tar.xz;
+Config error: Config file "../../projects/common/conf/image-creator/yum.conf" does not exist
+[master badae35] ModemManager: Autospec creation for version 1.12.8
+ 4 files changed, 8 insertions(+), 8 deletions(-)
+ARCHIVES []
+
+
+Processing https://shipos.erter.org/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : ModemManager-1.12.8
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 29
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+Unknown pattern match:  LIBSYSTEMD_LOGIN
+  New %files content found
+  New locale: ModemManager
+Building package ModemManager round 2
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+RPM build successful
+total tests: 31
+total passing: 31
+[WARNING] Unable to clean dnf repo: ModemManager, Command '['dnf', '--config', '../../projects/common/conf/image-creator/yum.conf', '--releasever', 'clear', 'clean', 'all']' returned non-zero exit status 1.
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Guessed commit message:
+ModemManager: Autospec creation for version 1.12.8
+
+make link-new-rpms PKG_REPO_DIR="."
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+mkdir -p ./rpms
+rm -f ./rpms/*.rpm
+find ./results -maxdepth 1 -name '*.rpm' -exec ln {} ./rpms/ \;
+rm -f ./rpms/*.src.rpm
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+diffstat for-review.txt
+ ModemManager.spec |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+**
+** NOTICE: A patch with changes is available in the file for-review.txt
+** To recreate (e.g., after git commit --amend), run make for-review.txt
+** To submit for review: git send-email --to <recipient> for-review.txt
+**
+
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://shipos.erter.org/ModemManager-1.12.8.tar.xz;
+ARCHIVES []
+
+
+Processing https://shipos.erter.org/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : 
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 30
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+total tests: 0
+total passing: 0
+[FATAL] Build failed, aborting
+make: *** [../common/Makefile.common:166: autospec] Error 1
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://shipos.erter.org/ModemManager-1.12.8.tar.xz;
+ARCHIVES []
+
+
+Processing https://shipos.erter.org/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : 
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 30
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+total tests: 0
+total passing: 0
+[FATAL] Build failed, aborting
+make: *** [../common/Makefile.common:166: autospec] Error 1
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://shipos.erter.org/ModemManager-1.12.8.tar.xz;
+ARCHIVES []
+
+
+Processing https://shipos.erter.org/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : 
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 30
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+total tests: 0
+total passing: 0
+[FATAL] Build failed, aborting
+make: *** [../common/Makefile.common:166: autospec] Error 1
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://shipos.erter.org/ModemManager-1.12.8.tar.xz;
+ARCHIVES []
+
+
+Processing https://shipos.erter.org/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : 
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 30
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+total tests: 0
+total passing: 0
+[FATAL] Build failed, aborting
+make: *** [../common/Makefile.common:166: autospec] Error 1
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz;
+Config error: Config file "../../projects/common/conf/image-creator/yum.conf" does not exist
+[master 12b72dc] ModemManager: Autospec creation for version 1.12.8
+ 4 files changed, 8 insertions(+), 8 deletions(-)
+ARCHIVES []
+
+
+Processing https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : ModemManager-1.12.8
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 30
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+Unknown pattern match:  LIBSYSTEMD_LOGIN
+  New %files content found
+  New locale: ModemManager
+Building package ModemManager round 2
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+RPM build successful
+total tests: 31
+total passing: 31
+[WARNING] Unable to clean dnf repo: ModemManager, Command '['dnf', '--config', '../../projects/common/conf/image-creator/yum.conf', '--releasever', 'clear', 'clean', 'all']' returned non-zero exit status 1.
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Guessed commit message:
+ModemManager: Autospec creation for version 1.12.8
+
+make link-new-rpms PKG_REPO_DIR="."
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+mkdir -p ./rpms
+rm -f ./rpms/*.rpm
+find ./results -maxdepth 1 -name '*.rpm' -exec ln {} ./rpms/ \;
+rm -f ./rpms/*.src.rpm
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+diffstat for-review.txt
+ ModemManager.spec |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+**
+** NOTICE: A patch with changes is available in the file for-review.txt
+** To recreate (e.g., after git commit --amend), run make for-review.txt
+** To submit for review: git send-email --to <recipient> for-review.txt
+**
+
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://shipos.erter.org/ModemManager-1.12.8.tar.xz;
+ARCHIVES []
+
+
+Processing https://shipos.erter.org/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : 
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 31
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+total tests: 0
+total passing: 0
+[FATAL] Build failed, aborting
+make: *** [../common/Makefile.common:166: autospec] Error 1
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://shipos.erter.org/ModemManager-1.12.8.tar.xz;
+ARCHIVES []
+
+
+Processing https://shipos.erter.org/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : 
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 31
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+total tests: 0
+total passing: 0
+[FATAL] Build failed, aborting
+make: *** [../common/Makefile.common:166: autospec] Error 1
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz;
+Config error: Config file "../../projects/common/conf/image-creator/yum.conf" does not exist
+[master 202c158] ModemManager: Autospec creation for version 1.12.8
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+ARCHIVES []
+
+
+Processing https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : ModemManager-1.12.8
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 31
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+Unknown pattern match:  LIBSYSTEMD_LOGIN
+  New %files content found
+  New locale: ModemManager
+Building package ModemManager round 2
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+RPM build successful
+total tests: 31
+total passing: 31
+[WARNING] Unable to clean dnf repo: ModemManager, Command '['dnf', '--config', '../../projects/common/conf/image-creator/yum.conf', '--releasever', 'clear', 'clean', 'all']' returned non-zero exit status 1.
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Guessed commit message:
+ModemManager: Autospec creation for version 1.12.8
+
+make link-new-rpms PKG_REPO_DIR="."
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+mkdir -p ./rpms
+rm -f ./rpms/*.rpm
+find ./results -maxdepth 1 -name '*.rpm' -exec ln {} ./rpms/ \;
+rm -f ./rpms/*.src.rpm
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+diffstat for-review.txt
+ options.conf |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+**
+** NOTICE: A patch with changes is available in the file for-review.txt
+** To recreate (e.g., after git commit --amend), run make for-review.txt
+** To submit for review: git send-email --to <recipient> for-review.txt
+**
+
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz;
+ARCHIVES []
+
+
+Processing https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : ModemManager-1.12.8
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 32
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+total tests: 0
+total passing: 0
+[FATAL] Build failed, aborting
+make: *** [../common/Makefile.common:166: autospec] Error 1
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz;
+ARCHIVES []
+
+
+Processing https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : ModemManager-1.12.8
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 32
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+total tests: 0
+total passing: 0
+[FATAL] Build failed, aborting
+make: *** [../common/Makefile.common:166: autospec] Error 1
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz;
+ARCHIVES []
+
+
+Processing https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : ModemManager-1.12.8
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 32
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+total tests: 0
+total passing: 0
+[FATAL] Build failed, aborting
+make: *** [../common/Makefile.common:166: autospec] Error 1
+Remote not yet initialized. Continuing.
+rm -rf ./rpms
+rm -f ./results/*.rpm
+rm -f ./results/*.log
+python3 ../../projects/autospec/autospec/autospec.py \
+	--target . \
+	--integrity \
+	--config "../../projects/common/conf/autospec.conf" \
+	--name ModemManager \
+	--archives  \
+	--mock-config /home/raalabs/clearlinux/projects/common/conf/clear.cfg \
+	--mock-opts=" " \
+	${SETVERSION:+ --version ${SETVERSION}} \
+	${NON_INTERACTIVE:+ --non_interactive} \
+	${SKIP_GIT:+ --skip-git} \
+	${CLEANUP:+ -C} \
+	https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz;
+Config error: Config file "../../projects/common/conf/image-creator/yum.conf" does not exist
+[master 413650a] ModemManager: Autospec creation for version 1.12.8
+ 4 files changed, 18 insertions(+), 4 deletions(-)
+ create mode 100644 0001-carrier-onomondo.patch
+ create mode 100644 series
+ARCHIVES []
+
+
+Processing https://www.freedesktop.org/software/ModemManager/ModemManager-1.12.8.tar.xz
+=========================================================================================================
+Name        : ModemManager
+Version     : 1.12.8
+Prefix      : ModemManager-1.12.8
+Warning: Set [autospec][packages_file] path to package list file for requires validation
+Warning: Set [autospec][git] upstream template for remote git URI configuration
+Warning: Set [autospec][license_fetch] uri for license fetch support
+Warning: Set [autospec][license_show] uri for license link check support
+Warning: Set [autospec][yum_conf] path to yum.conf file for whatrequires validation
+Release     : 32
+Banning build requirement: pkgconfig(libsystemd-login).
+Banning build requirement: pkgconfig(32libsystemd-login).
+Banning build requirement: pkgconfig(32mbim-glib).
+Banning build requirement: pkgconfig(32polkit-gobject-1).
+Banning build requirement: pkgconfig(32qmi-glib).
+Adding additional build requirement: mobile-broadband-provider-info.
+Adding additional build requirement: gobject-introspection-dev.
+Adding additional build (cache) requirement: pkg-config.
+Adding additional build (cache) requirement: vala.
+Buildreqs   : docbook-xml gcc-dev32 gcc-libgcc32 gcc-libstdc++32 gettext 
+Buildreqs   : glibc-dev32 glibc-libc32 gobject-introspection-dev gtk-doc gtk-doc-dev 
+Buildreqs   : libxslt-bin mobile-broadband-provider-info perl(XML::Parser) pkg-config pkgconfig(32gio-2.0) 
+Buildreqs   : pkgconfig(32gio-unix-2.0) pkgconfig(32glib-2.0) pkgconfig(32gmodule-2.0) pkgconfig(32gobject-2.0) pkgconfig(32gudev-1.0) 
+Buildreqs   : pkgconfig(32libsystemd) pkgconfig(gio-2.0) pkgconfig(gio-unix-2.0) pkgconfig(glib-2.0) pkgconfig(gmodule-2.0) 
+Buildreqs   : pkgconfig(gobject-2.0) pkgconfig(gudev-1.0) pkgconfig(libsystemd) pkgconfig(mbim-glib) pkgconfig(polkit-gobject-1) 
+Buildreqs   : pkgconfig(qmi-glib) vala 
+Summary     : Common headers provided by ModemManager
+Licenses    :  GPL-2.0 LGPL-2.1
+
+
+-------------------------------------------------------------------------------
+[INFO] Performing package integrity verification
+[INFO] None of ModemManager-1.12.8.tar.xz.(asc|sig|sign|sha256) is found in .
+[INFO] Skipping domain verification
+-------------------------------------------------------------------------------
+Building package ModemManager round 1
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+Unknown pattern match:  LIBSYSTEMD_LOGIN
+  New %files content found
+  New locale: ModemManager
+Building package ModemManager round 2
+ModemManager mock chroot at /var/lib/mock/clear-ModemManager
+RPM build successful
+total tests: 31
+total passing: 31
+[WARNING] Unable to clean dnf repo: ModemManager, Command '['dnf', '--config', '../../projects/common/conf/image-creator/yum.conf', '--releasever', 'clear', 'clean', 'all']' returned non-zero exit status 1.
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Configure miss: vapigen
+Configure miss: LIBSYSTEMD_LOGIN
+Guessed commit message:
+ModemManager: Autospec creation for version 1.12.8
+
+make link-new-rpms PKG_REPO_DIR="."
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+mkdir -p ./rpms
+rm -f ./rpms/*.rpm
+find ./results -maxdepth 1 -name '*.rpm' -exec ln {} ./rpms/ \;
+rm -f ./rpms/*.src.rpm
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Entering directory '/home/raalabs/clearlinux/packages/ModemManager'
+make[1]: Leaving directory '/home/raalabs/clearlinux/packages/ModemManager'
+diffstat for-review.txt
+ 0001-carrier-onomondo.patch |   11 +++++++++++
+ ModemManager.spec           |    2 ++
+ series                      |    1 +
+ 3 files changed, 14 insertions(+)
+
+**
+** NOTICE: A patch with changes is available in the file for-review.txt
+** To recreate (e.g., after git commit --amend), run make for-review.txt
+** To submit for review: git send-email --to <recipient> for-review.txt
+**
+

@@ -1,0 +1,63 @@
+From 413650a97453887219cd2aaac32847546cc99c60 Mon Sep 17 00:00:00 2001
+From: bt <postmannen@gmail.com>
+Date: Sat, 17 Oct 2020 07:37:48 +0200
+Subject: [PATCH ModemManager] ModemManager: Autospec creation for version
+ 1.12.8
+
+---
+ 0001-carrier-onomondo.patch | 11 +++++++++++
+ ModemManager.spec           |  8 +++++---
+ release                     |  2 +-
+ series                      |  1 +
+ 4 files changed, 18 insertions(+), 4 deletions(-)
+ create mode 100644 0001-carrier-onomondo.patch
+ create mode 100644 series
+
+diff --git a/0001-carrier-onomondo.patch b/0001-carrier-onomondo.patch
+new file mode 100644
+index 0000000..0740719
+--- /dev/null
++++ b/0001-carrier-onomondo.patch
+@@ -0,0 +1,11 @@
+++++ /plugins/dell/mm-dell-dw5821e-carrier-mapping.conf	2020-10-17 06:02:09.000000000 +0200
++@@ -9,6 +9,9 @@
++
++ [dell dw5821e]
++
+++# Onomondo
+++23873=onomondo
+++
++ # AT&T
++ 302220=ATT
++ 302221=ATT
+diff --git a/ModemManager.spec b/ModemManager.spec
+index 7acb2cf..71a93a0 100644
+--- a/ModemManager.spec
++++ b/ModemManager.spec
+@@ -50,6 +50,7 @@ BuildRequires : pkgconfig(mbim-glib)
+ BuildRequires : pkgconfig(polkit-gobject-1)
+ BuildRequires : pkgconfig(qmi-glib)
+ BuildRequires : vala
++Patch1: 0001-carrier-onomondo.patch
+ 
+ %description
+ ModemManager.
+@@ -154,6 +155,7 @@ services components for the ModemManager package.
+ %prep
+ %setup -q -n ModemManager-1.12.8
+ cd %{_builddir}/ModemManager-1.12.8
++%patch1 -p1
+ pushd ..
+ cp -a ModemManager-1.12.8 build32
+ popd
+diff --git a/series b/series
+new file mode 100644
+index 0000000..e3c8e66
+--- /dev/null
++++ b/series
+@@ -0,0 +1 @@
++0001-carrier-onomondo.patch -p1
+-- 
+2.28.0
+
+

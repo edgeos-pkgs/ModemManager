@@ -1,0 +1,962 @@
+INFO buildroot.py:374:  Mock Version: 1.4.21
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/pts
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/dev/pts
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/shm
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/dev/shm
+DEBUG buildroot.py:517:  kernel version == 5.5.13-924.native
+DEBUG util.py:224:  touching file: /var/lib/mock/clear-ModemManager/root/etc/fstab
+DEBUG util.py:224:  touching file: /var/lib/mock/clear-ModemManager/root/etc/yum/yum.conf
+DEBUG util.py:224:  touching file: /var/lib/mock/clear-ModemManager/root/etc/dnf/dnf.conf
+DEBUG util.py:224:  touching file: /var/lib/mock/clear-ModemManager/root/var/log/yum.log
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/var/cache/dnf/
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/clear/dnf_cache/', '/var/lib/mock/clear-ModemManager/root/var/cache/dnf/'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/var/tmp/ccache
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/clear/ccache/u1000/', '/var/lib/mock/clear-ModemManager/root/var/tmp/ccache'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG buildroot.py:161:  rootdir = /var/lib/mock/clear-ModemManager/root
+DEBUG buildroot.py:162:  resultdir = results/
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/etc/pki/mock
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/etc/dnf
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:682:  Using nspawn with args None
+DEBUG util.py:685:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '06c8ad8f42e4438b99546a5f62a8fc13', '-D', '/var/lib/mock/clear-ModemManager/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=en_US.UTF-8', '--setenv=CCACHE_DIR=/var/tmp/ccache', '--setenv=CCACHE_UMASK=002', '/usr/sbin/userdel', '-r', '-f', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'CCACHE_DIR': '/var/tmp/ccache', 'CCACHE_UMASK': '002'} and shell False
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:682:  Using nspawn with args None
+DEBUG util.py:685:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '072c746dd2044731b515581726001642', '-D', '/var/lib/mock/clear-ModemManager/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=en_US.UTF-8', '--setenv=CCACHE_DIR=/var/tmp/ccache', '--setenv=CCACHE_UMASK=002', '/usr/sbin/groupdel', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'CCACHE_DIR': '/var/tmp/ccache', 'CCACHE_UMASK': '002'} and shell False
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:594:  groupdel: group 'mockbuild' does not exist
+DEBUG util.py:740:  Child return code was: 6
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:682:  Using nspawn with args None
+DEBUG util.py:685:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'cf7c76692cf04782b6fd181d8aad2118', '-D', '/var/lib/mock/clear-ModemManager/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=en_US.UTF-8', '--setenv=CCACHE_DIR=/var/tmp/ccache', '--setenv=CCACHE_UMASK=002', '/usr/sbin/groupadd', '-g', '1000', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'CCACHE_DIR': '/var/tmp/ccache', 'CCACHE_UMASK': '002'} and shell False
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:682:  Using nspawn with args None
+DEBUG util.py:685:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '0a04a07eadcd46b6a66672d347884c4f', '-D', '/var/lib/mock/clear-ModemManager/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=en_US.UTF-8', '--setenv=CCACHE_DIR=/var/tmp/ccache', '--setenv=CCACHE_UMASK=002', '/usr/sbin/useradd', '-m', '-u', '1000', '-g', '1000', '-d', '/builddir', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'CCACHE_DIR': '/var/tmp/ccache', 'CCACHE_UMASK': '002'} and shell False
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/RPMS
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/RPMS
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/SPECS
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/SPECS
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/SRPMS
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/SRPMS
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/SOURCES
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/SOURCES
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/BUILD
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/BUILD
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/BUILDROOT
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/BUILDROOT
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/builddir/build/originals
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/root/builddir/build/originals
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/proc
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/proc
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '--rbind', '-o', 'nodev,noexec,nosuid,readonly,rprivate', '/proc', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/sys
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/sys
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '--rbind', '-o', 'nodev,noexec,nosuid,readonly,rprivate', '/sys', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/shm
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/pts
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/clear-ModemManager/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/rpmconfig
+DEBUG util.py:214:  creating dir: /var/lib/mock/clear-ModemManager/rpmconfig
+DEBUG package_manager.py:128:  ['/usr/bin/dnf', '--installroot', '/var/lib/mock/clear-ModemManager/root/', '-y', '--releasever', 'clear', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', 'update']
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/usr/bin/dnf', '--installroot', '/var/lib/mock/clear-ModemManager/root/', '-y', '--releasever', 'clear', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', 'update'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/clear-ModemManager/rpmconfig', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'CCACHE_DIR': '/var/tmp/ccache', 'CCACHE_UMASK': '002', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+DEBUG util.py:594:  Dependencies resolved.
+DEBUG util.py:594:  ================================================================================
+DEBUG util.py:594:   Package                       Arch        Version             Repository  Size
+DEBUG util.py:594:  ================================================================================
+DEBUG util.py:594:  Upgrading:
+DEBUG util.py:594:   binutils                      x86_64      2.35.1-388          local       84 k
+DEBUG util.py:594:   binutils-bin                  x86_64      2.35.1-388          local      2.0 M
+DEBUG util.py:594:   binutils-info                 x86_64      2.35.1-388          local      643 k
+DEBUG util.py:594:   binutils-lib                  x86_64      2.35.1-388          local      747 k
+DEBUG util.py:594:   binutils-license              x86_64      2.35.1-388          local       42 k
+DEBUG util.py:594:   binutils-locales              x86_64      2.35.1-388          local      4.1 M
+DEBUG util.py:594:   binutils-man                  x86_64      2.35.1-388          local      149 k
+DEBUG util.py:594:   gcc                           x86_64      10.2.0-992          local       92 M
+DEBUG util.py:594:   gcc-dev                       x86_64      10.2.0-992          local      9.6 M
+DEBUG util.py:594:   gcc-doc                       x86_64      10.2.0-992          local      2.5 M
+DEBUG util.py:594:   gcc-libs-math                 x86_64      10.2.0-992          local      6.5 M
+DEBUG util.py:594:   gcc-libubsan                  x86_64      10.2.0-992          local      5.6 M
+DEBUG util.py:594:   glibc-dev                     x86_64      2.31-342            local      620 k
+DEBUG util.py:594:   glibc-locale                  x86_64      2.31-342            local       51 M
+DEBUG util.py:594:   glibc-utils                   x86_64      2.31-342            local      211 k
+DEBUG util.py:594:   libc6                         x86_64      2.31-342            local      6.1 M
+DEBUG util.py:594:   libc6-dev                     x86_64      2.31-342            local      6.0 k
+DEBUG util.py:594:   libgcc1                       x86_64      10.2.0-992          local       54 k
+DEBUG util.py:594:   libstdc++                     x86_64      10.2.0-992          local      675 k
+DEBUG util.py:594:   perl-Test-Simple              x86_64      1.302182-90         local      6.2 k
+DEBUG util.py:594:   perl-Test-Simple-license      x86_64      1.302182-90         local       13 k
+DEBUG util.py:594:   perl-Test-Simple-perl         x86_64      1.302182-90         local      181 k
+DEBUG util.py:594:   readline-data                 x86_64      8.0-57              local      7.0 k
+DEBUG util.py:594:   readline-lib                  x86_64      8.0-57              local      146 k
+DEBUG util.py:594:   readline-license              x86_64      8.0-57              local       19 k
+DEBUG util.py:594:  Transaction Summary
+DEBUG util.py:594:  ================================================================================
+DEBUG util.py:594:  Upgrade  25 Packages
+DEBUG util.py:594:  Total size: 183 M
+DEBUG util.py:594:  Downloading Packages:
+DEBUG util.py:594:  Running transaction check
+DEBUG util.py:594:  Transaction check succeeded.
+DEBUG util.py:594:  Running transaction test
+DEBUG util.py:594:  Transaction test succeeded.
+DEBUG util.py:594:  Running transaction
+DEBUG util.py:594:  Upgraded:
+DEBUG util.py:594:    binutils-2.35.1-388.x86_64                                                    
+DEBUG util.py:594:    binutils-bin-2.35.1-388.x86_64                                                
+DEBUG util.py:594:    binutils-info-2.35.1-388.x86_64                                               
+DEBUG util.py:594:    binutils-lib-2.35.1-388.x86_64                                                
+DEBUG util.py:594:    binutils-license-2.35.1-388.x86_64                                            
+DEBUG util.py:594:    binutils-locales-2.35.1-388.x86_64                                            
+DEBUG util.py:594:    binutils-man-2.35.1-388.x86_64                                                
+DEBUG util.py:594:    gcc-10.2.0-992.x86_64                                                         
+DEBUG util.py:594:    gcc-dev-10.2.0-992.x86_64                                                     
+DEBUG util.py:594:    gcc-doc-10.2.0-992.x86_64                                                     
+DEBUG util.py:594:    gcc-libs-math-10.2.0-992.x86_64                                               
+DEBUG util.py:594:    gcc-libubsan-10.2.0-992.x86_64                                                
+DEBUG util.py:594:    glibc-dev-2.31-342.x86_64                                                     
+DEBUG util.py:594:    glibc-locale-2.31-342.x86_64                                                  
+DEBUG util.py:594:    glibc-utils-2.31-342.x86_64                                                   
+DEBUG util.py:594:    libc6-2.31-342.x86_64                                                         
+DEBUG util.py:594:    libc6-dev-2.31-342.x86_64                                                     
+DEBUG util.py:594:    libgcc1-10.2.0-992.x86_64                                                     
+DEBUG util.py:594:    libstdc++-10.2.0-992.x86_64                                                   
+DEBUG util.py:594:    perl-Test-Simple-1.302182-90.x86_64                                           
+DEBUG util.py:594:    perl-Test-Simple-license-1.302182-90.x86_64                                   
+DEBUG util.py:594:    perl-Test-Simple-perl-1.302182-90.x86_64                                      
+DEBUG util.py:594:    readline-data-8.0-57.x86_64                                                   
+DEBUG util.py:594:    readline-lib-8.0-57.x86_64                                                    
+DEBUG util.py:594:    readline-license-8.0-57.x86_64                                                
+DEBUG util.py:594:  Complete!
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:224:  touching file: /var/lib/mock/clear-ModemManager/root/.initialized
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:682:  Using nspawn with args ['--capability=cap_ipc_lock', '--console=pipe', '--bind=/tmp/mock-resolv.3o4dzwhz:/etc/resolv.conf']
+DEBUG util.py:685:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '59df3dc533c548eb9f435015bf206dd7', '-D', '/var/lib/mock/clear-ModemManager/root', '-a', '--capability=cap_ipc_lock', '--console=pipe', '--bind=/tmp/mock-resolv.3o4dzwhz:/etc/resolv.conf', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=en_US.UTF-8', '--setenv=CCACHE_DIR=/var/tmp/ccache', '--setenv=CCACHE_UMASK=002', '-u', 'mockbuild', '/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/ModemManager-1.12.8-32.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'CCACHE_DIR': '/var/tmp/ccache', 'CCACHE_UMASK': '002'} and shell False
+DEBUG util.py:423:  Unsharing. Flags: 1073741824
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:594:  Updating / installing...
+DEBUG util.py:594:  ModemManager-1.12.8-32                ########################################
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:682:  Using nspawn with args ['--capability=cap_ipc_lock', '--console=pipe', '--bind=/tmp/mock-resolv.3o4dzwhz:/etc/resolv.conf']
+DEBUG util.py:685:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '72dbe669abf04cf0a62dd7f056529157', '-D', '/var/lib/mock/clear-ModemManager/root', '-a', '--capability=cap_ipc_lock', '--console=pipe', '--bind=/tmp/mock-resolv.3o4dzwhz:/etc/resolv.conf', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=en_US.UTF-8', '--setenv=CCACHE_DIR=/var/tmp/ccache', '--setenv=CCACHE_UMASK=002', '-u', 'mockbuild', '/bin/rpm', '-qpl', '/builddir/build/originals/ModemManager-1.12.8-32.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'CCACHE_DIR': '/var/tmp/ccache', 'CCACHE_UMASK': '002'} and shell False
+DEBUG util.py:423:  Unsharing. Flags: 1073741824
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:594:  0001-carrier-onomondo.patch
+DEBUG util.py:594:  ModemManager-1.12.8.tar.xz
+DEBUG util.py:594:  ModemManager.spec
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:423:  Unsharing. Flags: 1073741824
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/proc
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/proc
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '--rbind', '-o', 'nodev,noexec,nosuid,readonly,rprivate', '/proc', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/sys
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/sys
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '--rbind', '-o', 'nodev,noexec,nosuid,readonly,rprivate', '/sys', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/shm
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/pts
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/clear-ModemManager/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/rpmconfig
+DEBUG package_manager.py:128:  ['/usr/bin/dnf', '--installroot', '/var/lib/mock/clear-ModemManager/root/', '--releasever', 'clear', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=local', 'install', 'ccache']
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/usr/bin/dnf', '--installroot', '/var/lib/mock/clear-ModemManager/root/', '--releasever', 'clear', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=local', 'install', 'ccache'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/clear-ModemManager/rpmconfig', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'CCACHE_DIR': '/var/tmp/ccache', 'CCACHE_UMASK': '002', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+DEBUG util.py:594:  Last metadata expiration check: 0:00:22 ago on Sat 17 Oct 2020 07:28:06 AM CEST.
+DEBUG util.py:594:  Dependencies resolved.
+DEBUG util.py:594:  ================================================================================
+DEBUG util.py:594:   Package                Architecture   Version              Repository     Size
+DEBUG util.py:594:  ================================================================================
+DEBUG util.py:594:  Installing:
+DEBUG util.py:594:   ccache                 x86_64         3.7.12-46            local         9.1 k
+DEBUG util.py:594:  Installing dependencies:
+DEBUG util.py:594:   ccache-bin             x86_64         3.7.12-46            local          74 k
+DEBUG util.py:594:   ccache-data            x86_64         3.7.12-46            local         6.9 k
+DEBUG util.py:594:   ccache-license         x86_64         3.7.12-46            local          14 k
+DEBUG util.py:594:   ccache-man             x86_64         3.7.12-46            local          24 k
+DEBUG util.py:594:  Transaction Summary
+DEBUG util.py:594:  ================================================================================
+DEBUG util.py:594:  Install  5 Packages
+DEBUG util.py:594:  Total size: 128 k
+DEBUG util.py:594:  Installed size: 246 k
+DEBUG util.py:594:  Downloading Packages:
+DEBUG util.py:594:  Running transaction check
+DEBUG util.py:594:  Transaction check succeeded.
+DEBUG util.py:594:  Running transaction test
+DEBUG util.py:594:  Transaction test succeeded.
+DEBUG util.py:594:  Running transaction
+DEBUG util.py:594:  New leaves:
+DEBUG util.py:594:    ccache.x86_64
+DEBUG util.py:594:  Installed:
+DEBUG util.py:594:    ccache-3.7.12-46.x86_64               ccache-bin-3.7.12-46.x86_64             
+DEBUG util.py:594:    ccache-data-3.7.12-46.x86_64          ccache-license-3.7.12-46.x86_64         
+DEBUG util.py:594:    ccache-man-3.7.12-46.x86_64          
+DEBUG util.py:594:  Complete!
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/proc
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/proc
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '--rbind', '-o', 'nodev,noexec,nosuid,readonly,rprivate', '/proc', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/sys
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/sys
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '--rbind', '-o', 'nodev,noexec,nosuid,readonly,rprivate', '/sys', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/shm
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/clear-ModemManager/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/root/dev/pts
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/clear-ModemManager/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:211:  ensuring that dir exists: /var/lib/mock/clear-ModemManager/rpmconfig
+DEBUG package_manager.py:128:  ['/usr/bin/dnf', 'builddep', '--installroot', '/var/lib/mock/clear-ModemManager/root/', '--releasever', 'clear', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=local', '--disableplugin=local', '/var/lib/mock/clear-ModemManager/root//builddir/build/SRPMS/ModemManager-1.12.8-32.src.rpm']
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/usr/bin/dnf', 'builddep', '--installroot', '/var/lib/mock/clear-ModemManager/root/', '--releasever', 'clear', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=local', '--disableplugin=local', '/var/lib/mock/clear-ModemManager/root//builddir/build/SRPMS/ModemManager-1.12.8-32.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/clear-ModemManager/rpmconfig', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'CCACHE_DIR': '/var/tmp/ccache', 'CCACHE_UMASK': '002', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+DEBUG util.py:594:  Last metadata expiration check: 0:00:23 ago on Sat 17 Oct 2020 07:28:06 AM CEST.
+DEBUG util.py:594:  Dependencies resolved.
+DEBUG util.py:594:  ====================================================================================
+DEBUG util.py:594:   Package                               Arch    Version                  Repo    Size
+DEBUG util.py:594:  ====================================================================================
+DEBUG util.py:594:  Installing:
+DEBUG util.py:594:   docbook-xml                           x86_64  4.5-25                   local   11 M
+DEBUG util.py:594:   gcc-dev32                             x86_64  10.2.0-992               local   13 M
+DEBUG util.py:594:   gcc-libgcc32                          x86_64  10.2.0-992               local  2.8 M
+DEBUG util.py:594:   gcc-libstdc++32                       x86_64  10.2.0-992               local  720 k
+DEBUG util.py:594:   glib-dev                              x86_64  2.64.6-120               local  374 k
+DEBUG util.py:594:   glib-dev32                            x86_64  2.64.6-120               local   11 k
+DEBUG util.py:594:   glibc-dev32                           x86_64  2.31-342                 local   12 M
+DEBUG util.py:594:   glibc-libc32                          x86_64  2.31-342                 local  4.8 M
+DEBUG util.py:594:   gobject-introspection-dev             x86_64  1.66.1-38                local   24 k
+DEBUG util.py:594:   gtk-doc                               x86_64  1.32-40                  local  6.4 k
+DEBUG util.py:594:   gtk-doc-dev                           x86_64  1.32-40                  local  8.8 k
+DEBUG util.py:594:   libgudev-dev                          x86_64  234-17                   local   11 k
+DEBUG util.py:594:   libgudev-dev32                        x86_64  234-17                   local  7.2 k
+DEBUG util.py:594:   libmbim-dev                           x86_64  1.24.4-16                local   57 k
+DEBUG util.py:594:   libqmi-dev                            x86_64  1.26.6-21                local  276 k
+DEBUG util.py:594:   libxslt-bin                           x86_64  1.1.34-49                local   19 k
+DEBUG util.py:594:   mobile-broadband-provider-info        x86_64  20190618-4               local  6.1 k
+DEBUG util.py:594:   perl-XML-Parser-perl                  x86_64  2.46-40                  local  207 k
+DEBUG util.py:594:   polkit-dev                            x86_64  0.118-22                 local   22 k
+DEBUG util.py:594:   systemd-dev                           x86_64  246.4-282                local  287 k
+DEBUG util.py:594:   systemd-dev32                         x86_64  246.4-282                local  7.8 k
+DEBUG util.py:594:   vala                                  x86_64  0.50.1-44                local   72 k
+DEBUG util.py:594:  Installing dependencies:
+DEBUG util.py:594:   Linux-PAM-lib32                       x86_64  1.3.1-54                 local  213 k
+DEBUG util.py:594:   Pygments                              x86_64  2.7.1-62                 local  6.5 k
+DEBUG util.py:594:   Pygments-bin                          x86_64  2.7.1-62                 local  7.2 k
+DEBUG util.py:594:   Pygments-license                      x86_64  2.7.1-62                 local  7.4 k
+DEBUG util.py:594:   Pygments-python                       x86_64  2.7.1-62                 local  6.2 k
+DEBUG util.py:594:   Pygments-python3                      x86_64  2.7.1-62                 local  1.8 M
+DEBUG util.py:594:   Z3-lib                                x86_64  4.8.9-23                 local  9.2 M
+DEBUG util.py:594:   Z3-license                            x86_64  4.8.9-23                 local  7.3 k
+DEBUG util.py:594:   appdirs                               x86_64  1.4.4-50                 local  6.3 k
+DEBUG util.py:594:   appdirs-license                       x86_64  1.4.4-50                 local  7.4 k
+DEBUG util.py:594:   appdirs-python                        x86_64  1.4.4-50                 local  6.1 k
+DEBUG util.py:594:   appdirs-python3                       x86_64  1.4.4-50                 local   21 k
+DEBUG util.py:594:   astroid                               x86_64  2.4.2-98                 local  6.2 k
+DEBUG util.py:594:   astroid-license                       x86_64  2.4.2-98                 local   19 k
+DEBUG util.py:594:   astroid-python                        x86_64  2.4.2-98                 local  6.1 k
+DEBUG util.py:594:   astroid-python3                       x86_64  2.4.2-98                 local  385 k
+DEBUG util.py:594:   audit-lib                             x86_64  2.8.5-45                 local  108 k
+DEBUG util.py:594:   audit-license                         x86_64  2.8.5-45                 local   19 k
+DEBUG util.py:594:   cairo-lib                             x86_64  1.16.0-70                local  906 k
+DEBUG util.py:594:   cairo-license                         x86_64  1.16.0-70                local   40 k
+DEBUG util.py:594:   certifi                               x86_64  2020.6.20-66             local  6.5 k
+DEBUG util.py:594:   certifi-license                       x86_64  2020.6.20-66             local  7.3 k
+DEBUG util.py:594:   certifi-python                        x86_64  2020.6.20-66             local  6.2 k
+DEBUG util.py:594:   certifi-python3                       x86_64  2020.6.20-66             local   12 k
+DEBUG util.py:594:   colorama                              x86_64  0.4.3-65                 local  6.3 k
+DEBUG util.py:594:   colorama-license                      x86_64  0.4.3-65                 local  7.5 k
+DEBUG util.py:594:   colorama-python                       x86_64  0.4.3-65                 local  6.1 k
+DEBUG util.py:594:   colorama-python3                      x86_64  0.4.3-65                 local   30 k
+DEBUG util.py:594:   compat-boost-soname1.73.0             x86_64  1.73.0-1                 local  3.7 M
+DEBUG util.py:594:   contextlib2                           x86_64  0.5.5-58                 local  7.9 k
+DEBUG util.py:594:   contextlib2-license                   x86_64  0.5.5-58                 local  9.1 k
+DEBUG util.py:594:   contextlib2-python                    x86_64  0.5.5-58                 local  6.1 k
+DEBUG util.py:594:   contextlib2-python3                   x86_64  0.5.5-58                 local   17 k
+DEBUG util.py:594:   distlib                               x86_64  0.3.1-14                 local  6.2 k
+DEBUG util.py:594:   distlib-license                       x86_64  0.3.1-14                 local   11 k
+DEBUG util.py:594:   distlib-python                        x86_64  0.3.1-14                 local  6.1 k
+DEBUG util.py:594:   distlib-python3                       x86_64  0.3.1-14                 local  496 k
+DEBUG util.py:594:   filelock                              x86_64  3.0.12-14                local  6.2 k
+DEBUG util.py:594:   filelock-license                      x86_64  3.0.12-14                local  7.4 k
+DEBUG util.py:594:   filelock-python                       x86_64  3.0.12-14                local  6.1 k
+DEBUG util.py:594:   filelock-python3                      x86_64  3.0.12-14                local   16 k
+DEBUG util.py:594:   fontconfig-data                       x86_64  2.13.1-43                local   29 k
+DEBUG util.py:594:   fontconfig-lib                        x86_64  2.13.1-43                local  180 k
+DEBUG util.py:594:   fontconfig-license                    x86_64  2.13.1-43                local  7.4 k
+DEBUG util.py:594:   freetype-lib                          x86_64  2.10.2-60                local  448 k
+DEBUG util.py:594:   freetype-license                      x86_64  2.10.2-60                local   14 k
+DEBUG util.py:594:   glib                                  x86_64  2.64.6-120               local  6.5 k
+DEBUG util.py:594:   glib-autostart                        x86_64  2.64.6-120               local  6.7 k
+DEBUG util.py:594:   glib-bin                              x86_64  2.64.6-120               local  139 k
+DEBUG util.py:594:   glib-lib32                            x86_64  2.64.6-120               local  1.7 M
+DEBUG util.py:594:   glib-locales                          x86_64  2.64.6-120               local  2.6 M
+DEBUG util.py:594:   glib-services                         x86_64  2.64.6-120               local  7.2 k
+DEBUG util.py:594:   glibc-bin                             x86_64  2.31-342                 local  329 k
+DEBUG util.py:594:   gnutls-lib                            x86_64  3.6.15-67                local  841 k
+DEBUG util.py:594:   gnutls-license                        x86_64  3.6.15-67                local   42 k
+DEBUG util.py:594:   gobject-introspection                 x86_64  1.66.1-38                local  6.4 k
+DEBUG util.py:594:   gobject-introspection-bin             x86_64  1.66.1-38                local  105 k
+DEBUG util.py:594:   gobject-introspection-data            x86_64  1.66.1-38                local  1.4 M
+DEBUG util.py:594:   gobject-introspection-lib             x86_64  1.66.1-38                local  236 k
+DEBUG util.py:594:   gobject-introspection-license         x86_64  1.66.1-38                local   19 k
+DEBUG util.py:594:   gobject-introspection-man             x86_64  1.66.1-38                local   10 k
+DEBUG util.py:594:   graphite-data                         x86_64  1.3.13-7                 local  7.8 k
+DEBUG util.py:594:   graphite-lib                          x86_64  1.3.13-7                 local   77 k
+DEBUG util.py:594:   graphite-license                      x86_64  1.3.13-7                 local   19 k
+DEBUG util.py:594:   graphviz-data                         x86_64  2.44.1-40                local  4.2 M
+DEBUG util.py:594:   graphviz-lib                          x86_64  2.44.1-40                local  2.9 M
+DEBUG util.py:594:   graphviz-license                      x86_64  2.44.1-40                local   16 k
+DEBUG util.py:594:   gtk-doc-bin                           x86_64  1.32-40                  local   16 k
+DEBUG util.py:594:   gtk-doc-data                          x86_64  1.32-40                  local  124 k
+DEBUG util.py:594:   gtk-doc-license                       x86_64  1.32-40                  local   19 k
+DEBUG util.py:594:   harfbuzz-data                         x86_64  2.6.7-104                local  101 k
+DEBUG util.py:594:   harfbuzz-lib                          x86_64  2.6.7-104                local  1.7 M
+DEBUG util.py:594:   harfbuzz-license                      x86_64  2.6.7-104                local   11 k
+DEBUG util.py:594:   icu4c-data                            x86_64  67.1-24                  local   16 k
+DEBUG util.py:594:   icu4c-lib                             x86_64  67.1-24                  local   13 M
+DEBUG util.py:594:   icu4c-license                         x86_64  67.1-24                  local   13 k
+DEBUG util.py:594:   importlib_metadata                    x86_64  2.0.0-32                 local  6.5 k
+DEBUG util.py:594:   importlib_metadata-license            x86_64  2.0.0-32                 local  7.2 k
+DEBUG util.py:594:   importlib_metadata-python             x86_64  2.0.0-32                 local  6.2 k
+DEBUG util.py:594:   importlib_metadata-python3            x86_64  2.0.0-32                 local   57 k
+DEBUG util.py:594:   isort                                 x86_64  5.6.4-81                 local  6.3 k
+DEBUG util.py:594:   isort-bin                             x86_64  5.6.4-81                 local  7.2 k
+DEBUG util.py:594:   isort-license                         x86_64  5.6.4-81                 local  7.6 k
+DEBUG util.py:594:   isort-python                          x86_64  5.6.4-81                 local  6.1 k
+DEBUG util.py:594:   isort-python3                         x86_64  5.6.4-81                 local  191 k
+DEBUG util.py:594:   lazy-object-proxy                     x86_64  1.5.1-45                 local  6.3 k
+DEBUG util.py:594:   lazy-object-proxy-license             x86_64  1.5.1-45                 local  7.5 k
+DEBUG util.py:594:   lazy-object-proxy-python              x86_64  1.5.1-45                 local  6.2 k
+DEBUG util.py:594:   lazy-object-proxy-python3             x86_64  1.5.1-45                 local   34 k
+DEBUG util.py:594:   libX11-lib                            x86_64  1.6.12-422               local  2.7 M
+DEBUG util.py:594:   libXv-lib                             x86_64  1.0.11-16                local   15 k
+DEBUG util.py:594:   libXv-license                         x86_64  1.0.11-16                local  7.1 k
+DEBUG util.py:594:   libXvMC-lib                           x86_64  1.0.11-18                local   19 k
+DEBUG util.py:594:   libXvMC-license                       x86_64  1.0.11-18                local  6.9 k
+DEBUG util.py:594:   libcap-lib32                          x86_64  2.27-36                  local   16 k
+DEBUG util.py:594:   libcap-ng-lib                         x86_64  0.7.10-31                local   15 k
+DEBUG util.py:594:   libcap-ng-license                     x86_64  0.7.10-31                local   18 k
+DEBUG util.py:594:   libdrm-data                           x86_64  2.4.102-69               local  8.0 k
+DEBUG util.py:594:   libdrm-lib                            x86_64  2.4.102-69               local  185 k
+DEBUG util.py:594:   libffi                                x86_64  3.2.1-34                 local  6.2 k
+DEBUG util.py:594:   libffi-dev                            x86_64  3.2.1-34                 local   15 k
+DEBUG util.py:594:   libffi-info                           x86_64  3.2.1-34                 local   14 k
+DEBUG util.py:594:   libffi-lib32                          x86_64  3.2.1-34                 local   23 k
+DEBUG util.py:594:   libgudev                              x86_64  234-17                   local  9.0 k
+DEBUG util.py:594:   libgudev-data                         x86_64  234-17                   local   18 k
+DEBUG util.py:594:   libgudev-lib                          x86_64  234-17                   local   22 k
+DEBUG util.py:594:   libgudev-lib32                        x86_64  234-17                   local   23 k
+DEBUG util.py:594:   libgudev-license                      x86_64  234-17                   local   16 k
+DEBUG util.py:594:   libidn2-lib                           x86_64  2.3.0-8                  local  130 k
+DEBUG util.py:594:   libidn2-license                       x86_64  2.3.0-8                  local   19 k
+DEBUG util.py:594:   libmbim                               x86_64  1.24.4-16                local  6.3 k
+DEBUG util.py:594:   libmbim-bin                           x86_64  1.24.4-16                local   44 k
+DEBUG util.py:594:   libmbim-data                          x86_64  1.24.4-16                local   95 k
+DEBUG util.py:594:   libmbim-lib                           x86_64  1.24.4-16                local  129 k
+DEBUG util.py:594:   libmbim-libexec                       x86_64  1.24.4-16                local   12 k
+DEBUG util.py:594:   libmbim-license                       x86_64  1.24.4-16                local   19 k
+DEBUG util.py:594:   libmbim-man                           x86_64  1.24.4-16                local  9.2 k
+DEBUG util.py:594:   libpciaccess-lib                      x86_64  0.16-22                  local   22 k
+DEBUG util.py:594:   libpciaccess-license                  x86_64  0.16-22                  local  7.7 k
+DEBUG util.py:594:   libpng-lib                            x86_64  1.6.37-60                local  313 k
+DEBUG util.py:594:   libpng-license                        x86_64  1.6.37-60                local   16 k
+DEBUG util.py:594:   libpwquality-lib                      x86_64  1.4.4-37                 local   22 k
+DEBUG util.py:594:   libpwquality-license                  x86_64  1.4.4-37                 local   14 k
+DEBUG util.py:594:   libqmi                                x86_64  1.26.6-21                local  6.3 k
+DEBUG util.py:594:   libqmi-bin                            x86_64  1.26.6-21                local  193 k
+DEBUG util.py:594:   libqmi-data                           x86_64  1.26.6-21                local  564 k
+DEBUG util.py:594:   libqmi-lib                            x86_64  1.26.6-21                local  764 k
+DEBUG util.py:594:   libqmi-libexec                        x86_64  1.26.6-21                local   11 k
+DEBUG util.py:594:   libqmi-license                        x86_64  1.26.6-21                local   19 k
+DEBUG util.py:594:   libqmi-man                            x86_64  1.26.6-21                local   13 k
+DEBUG util.py:594:   libtasn1-lib32                        x86_64  4.13-35                  local   44 k
+DEBUG util.py:594:   libwebp-lib                           x86_64  1.1.0-30                 local  747 k
+DEBUG util.py:594:   libwebp-license                       x86_64  1.1.0-30                 local  7.4 k
+DEBUG util.py:594:   libxslt                               x86_64  1.1.34-49                local  6.8 k
+DEBUG util.py:594:   libxslt-lib                           x86_64  1.1.34-49                local  170 k
+DEBUG util.py:594:   libxslt-license                       x86_64  1.1.34-49                local  7.9 k
+DEBUG util.py:594:   libxslt-man                           x86_64  1.1.34-49                local  9.6 k
+DEBUG util.py:594:   llvm-extras-libclang-cpp              x86_64  10.0.1-123               local   13 M
+DEBUG util.py:594:   llvm-extras-libllvm                   x86_64  10.0.1-123               local   22 M
+DEBUG util.py:594:   lz4-lib32                             x86_64  1.9.2-29                 local   46 k
+DEBUG util.py:594:   mccabe                                x86_64  0.6.1-53                 local  9.3 k
+DEBUG util.py:594:   mccabe-license                        x86_64  0.6.1-53                 local  7.4 k
+DEBUG util.py:594:   mccabe-python                         x86_64  0.6.1-53                 local  6.1 k
+DEBUG util.py:594:   mccabe-python3                        x86_64  0.6.1-53                 local   18 k
+DEBUG util.py:594:   mesa-data                             x86_64  20.1+3492.400c2ff226-251 local   13 k
+DEBUG util.py:594:   mesa-lib                              x86_64  20.1+3492.400c2ff226-251 local   71 M
+DEBUG util.py:594:   mesa-license                          x86_64  20.1+3492.400c2ff226-251 local  9.2 k
+DEBUG util.py:594:   mobile-broadband-provider-info-data   x86_64  20190618-4               local   79 k
+DEBUG util.py:594:   mozjs78-lib                           x86_64  78.3.0-6                 local  304 M
+DEBUG util.py:594:   nettle-lib                            x86_64  3.6-44                   local  355 k
+DEBUG util.py:594:   nettle-license                        x86_64  3.6-44                   local   26 k
+DEBUG util.py:594:   p11-kit-lib32                         x86_64  0.23.15-55               local  552 k
+DEBUG util.py:594:   packaging                             x86_64  20.4-43                  local  6.2 k
+DEBUG util.py:594:   packaging-license                     x86_64  20.4-43                  local   11 k
+DEBUG util.py:594:   packaging-python                      x86_64  20.4-43                  local  6.2 k
+DEBUG util.py:594:   packaging-python3                     x86_64  20.4-43                  local   64 k
+DEBUG util.py:594:   pathlib2                              x86_64  2.3.5-15                 local  8.3 k
+DEBUG util.py:594:   pathlib2-license                      x86_64  2.3.5-15                 local  7.3 k
+DEBUG util.py:594:   pathlib2-python                       x86_64  2.3.5-15                 local  6.1 k
+DEBUG util.py:594:   pathlib2-python3                      x86_64  2.3.5-15                 local   43 k
+DEBUG util.py:594:   pcre                                  x86_64  8.44-57                  local  6.6 k
+DEBUG util.py:594:   pcre-bin                              x86_64  8.44-57                  local  155 k
+DEBUG util.py:594:   pcre-dev                              x86_64  8.44-57                  local  193 k
+DEBUG util.py:594:   pcre-extras                           x86_64  8.44-57                  local  923 k
+DEBUG util.py:594:   pcre-lib32                            x86_64  8.44-57                  local  772 k
+DEBUG util.py:594:   pcre-man                              x86_64  8.44-57                  local   32 k
+DEBUG util.py:594:   perl-XML-Parser                       x86_64  2.46-40                  local  6.2 k
+DEBUG util.py:594:   pip                                   x86_64  20.2.3-100               local  6.3 k
+DEBUG util.py:594:   pip-bin                               x86_64  20.2.3-100               local  7.6 k
+DEBUG util.py:594:   pip-license                           x86_64  20.2.3-100               local   39 k
+DEBUG util.py:594:   pip-python                            x86_64  20.2.3-100               local  6.2 k
+DEBUG util.py:594:   pip-python3                           x86_64  20.2.3-100               local  2.3 M
+DEBUG util.py:594:   pixman-lib                            x86_64  0.38.4-37                local  1.6 M
+DEBUG util.py:594:   pixman-license                        x86_64  0.38.4-37                local  7.7 k
+DEBUG util.py:594:   pluggy                                x86_64  0.13.1-63                local  6.6 k
+DEBUG util.py:594:   pluggy-license                        x86_64  0.13.1-63                local  7.4 k
+DEBUG util.py:594:   pluggy-python                         x86_64  0.13.1-63                local  6.1 k
+DEBUG util.py:594:   pluggy-python3                        x86_64  0.13.1-63                local   38 k
+DEBUG util.py:594:   polkit                                x86_64  0.118-22                 local   64 k
+DEBUG util.py:594:   polkit-bin                            x86_64  0.118-22                 local   33 k
+DEBUG util.py:594:   polkit-data                           x86_64  0.118-22                 local   41 k
+DEBUG util.py:594:   polkit-lib                            x86_64  0.118-22                 local   64 k
+DEBUG util.py:594:   polkit-license                        x86_64  0.118-22                 local   20 k
+DEBUG util.py:594:   polkit-locales                        x86_64  0.118-22                 local   25 k
+DEBUG util.py:594:   polkit-services                       x86_64  0.118-22                 local  6.7 k
+DEBUG util.py:594:   py                                    x86_64  1.9.0-74                 local  6.2 k
+DEBUG util.py:594:   py-license                            x86_64  1.9.0-74                 local  7.3 k
+DEBUG util.py:594:   py-python                             x86_64  1.9.0-74                 local  6.1 k
+DEBUG util.py:594:   py-python3                            x86_64  1.9.0-74                 local  197 k
+DEBUG util.py:594:   pyflakes                              x86_64  2.2.0-69                 local  6.5 k
+DEBUG util.py:594:   pyflakes-bin                          x86_64  2.2.0-69                 local  7.2 k
+DEBUG util.py:594:   pyflakes-license                      x86_64  2.2.0-69                 local  7.4 k
+DEBUG util.py:594:   pyflakes-python                       x86_64  2.2.0-69                 local  6.1 k
+DEBUG util.py:594:   pyflakes-python3                      x86_64  2.2.0-69                 local  158 k
+DEBUG util.py:594:   pylint                                x86_64  2.5.3-84                 local  6.4 k
+DEBUG util.py:594:   pylint-bin                            x86_64  2.5.3-84                 local  7.7 k
+DEBUG util.py:594:   pylint-license                        x86_64  2.5.3-84                 local   13 k
+DEBUG util.py:594:   pylint-python                         x86_64  2.5.3-84                 local  6.1 k
+DEBUG util.py:594:   pylint-python3                        x86_64  2.5.3-84                 local  616 k
+DEBUG util.py:594:   pyparsing                             x86_64  2.4.7-78                 local  6.2 k
+DEBUG util.py:594:   pyparsing-license                     x86_64  2.4.7-78                 local  7.3 k
+DEBUG util.py:594:   pyparsing-python                      x86_64  2.4.7-78                 local  6.2 k
+DEBUG util.py:594:   pyparsing-python3                     x86_64  2.4.7-78                 local  157 k
+DEBUG util.py:594:   setuptools                            x86_64  50.3.0-184               local  6.4 k
+DEBUG util.py:594:   setuptools-python                     x86_64  50.3.0-184               local  6.2 k
+DEBUG util.py:594:   six                                   x86_64  1.15.0-66                local  6.2 k
+DEBUG util.py:594:   six-license                           x86_64  1.15.0-66                local  7.3 k
+DEBUG util.py:594:   six-python                            x86_64  1.15.0-66                local  6.1 k
+DEBUG util.py:594:   six-python3                           x86_64  1.15.0-66                local   28 k
+DEBUG util.py:594:   source-highlight                      x86_64  3.1.9-38                 local  6.3 k
+DEBUG util.py:594:   source-highlight-bin                  x86_64  3.1.9-38                 local   77 k
+DEBUG util.py:594:   source-highlight-data                 x86_64  3.1.9-38                 local   95 k
+DEBUG util.py:594:   source-highlight-info                 x86_64  3.1.9-38                 local   79 k
+DEBUG util.py:594:   source-highlight-lib                  x86_64  3.1.9-38                 local  328 k
+DEBUG util.py:594:   source-highlight-license              x86_64  3.1.9-38                 local   19 k
+DEBUG util.py:594:   source-highlight-man                  x86_64  3.1.9-38                 local   10 k
+DEBUG util.py:594:   systemd                               x86_64  246.4-282                local  2.5 M
+DEBUG util.py:594:   systemd-autostart                     x86_64  246.4-282                local   12 k
+DEBUG util.py:594:   systemd-bin                           x86_64  246.4-282                local  1.6 M
+DEBUG util.py:594:   systemd-config                        x86_64  246.4-282                local   25 k
+DEBUG util.py:594:   systemd-lib32                         x86_64  246.4-282                local  1.3 M
+DEBUG util.py:594:   systemd-locales                       x86_64  246.4-282                local  117 k
+DEBUG util.py:594:   systemd-man                           x86_64  246.4-282                local  666 k
+DEBUG util.py:594:   systemd-services                      x86_64  246.4-282                local   48 k
+DEBUG util.py:594:   tcl-bin                               x86_64  8.6.10-50                local  9.3 k
+DEBUG util.py:594:   tcl-lib                               x86_64  8.6.10-50                local  3.5 M
+DEBUG util.py:594:   tcl-license                           x86_64  8.6.10-50                local   10 k
+DEBUG util.py:594:   toml                                  x86_64  0.10.1-11                local  6.1 k
+DEBUG util.py:594:   toml-python                           x86_64  0.10.1-11                local  6.1 k
+DEBUG util.py:594:   toml-python3                          x86_64  0.10.1-11                local   39 k
+DEBUG util.py:594:   tox                                   x86_64  3.20.1-111               local  7.0 k
+DEBUG util.py:594:   tox-bin                               x86_64  3.20.1-111               local  7.3 k
+DEBUG util.py:594:   tox-license                           x86_64  3.20.1-111               local  7.3 k
+DEBUG util.py:594:   tox-python                            x86_64  3.20.1-111               local  6.1 k
+DEBUG util.py:594:   tox-python3                           x86_64  3.20.1-111               local  181 k
+DEBUG util.py:594:   typed_ast                             x86_64  1.4.1-32                 local  6.6 k
+DEBUG util.py:594:   typed_ast-license                     x86_64  1.4.1-32                 local   12 k
+DEBUG util.py:594:   typed_ast-python                      x86_64  1.4.1-32                 local  6.2 k
+DEBUG util.py:594:   typed_ast-python3                     x86_64  1.4.1-32                 local  662 k
+DEBUG util.py:594:   util-linux                            x86_64  2.36-155                 local  6.4 k
+DEBUG util.py:594:   util-linux-autostart                  x86_64  2.36-155                 local  6.8 k
+DEBUG util.py:594:   util-linux-bin                        x86_64  2.36-155                 local  1.1 M
+DEBUG util.py:594:   util-linux-dev                        x86_64  2.36-155                 local   36 k
+DEBUG util.py:594:   util-linux-lib32                      x86_64  2.36-155                 local  365 k
+DEBUG util.py:594:   util-linux-locales                    x86_64  2.36-155                 local  2.5 M
+DEBUG util.py:594:   util-linux-man                        x86_64  2.36-155                 local  226 k
+DEBUG util.py:594:   util-linux-services                   x86_64  2.36-155                 local  7.7 k
+DEBUG util.py:594:   util-linux-setuid                     x86_64  2.36-155                 local   27 k
+DEBUG util.py:594:   vala-bin                              x86_64  0.50.1-44                local  142 k
+DEBUG util.py:594:   vala-data                             x86_64  0.50.1-44                local  1.1 M
+DEBUG util.py:594:   vala-lib                              x86_64  0.50.1-44                local  1.7 M
+DEBUG util.py:594:   vala-license                          x86_64  0.50.1-44                local   16 k
+DEBUG util.py:594:   vala-man                              x86_64  0.50.1-44                local   11 k
+DEBUG util.py:594:   virtualenv                            x86_64  20.0.34-115              local  7.5 k
+DEBUG util.py:594:   virtualenv-bin                        x86_64  20.0.34-115              local  7.2 k
+DEBUG util.py:594:   virtualenv-license                    x86_64  20.0.34-115              local  7.4 k
+DEBUG util.py:594:   virtualenv-python                     x86_64  20.0.34-115              local  6.2 k
+DEBUG util.py:594:   virtualenv-python3                    x86_64  20.0.34-115              local  4.8 M
+DEBUG util.py:594:   wayland-data                          x86_64  1.18.0-25                local   37 k
+DEBUG util.py:594:   wayland-lib                           x86_64  1.18.0-25                local   78 k
+DEBUG util.py:594:   wayland-license                       x86_64  1.18.0-25                local  7.4 k
+DEBUG util.py:594:   wrapt                                 x86_64  1.11.2-49                local  7.2 k
+DEBUG util.py:594:   wrapt-license                         x86_64  1.11.2-49                local  7.4 k
+DEBUG util.py:594:   wrapt-python                          x86_64  1.11.2-49                local  6.1 k
+DEBUG util.py:594:   wrapt-python3                         x86_64  1.11.2-49                local   52 k
+DEBUG util.py:594:   zipp                                  x86_64  3.3.0-18                 local  6.3 k
+DEBUG util.py:594:   zipp-license                          x86_64  3.3.0-18                 local  7.3 k
+DEBUG util.py:594:   zipp-python                           x86_64  3.3.0-18                 local  6.1 k
+DEBUG util.py:594:   zipp-python3                          x86_64  3.3.0-18                 local   15 k
+DEBUG util.py:594:   zlib                                  x86_64  1.2.11.1.jtkv6.3-60      local  6.4 k
+DEBUG util.py:594:   zlib-dev                              x86_64  1.2.11.1.jtkv6.3-60      local   39 k
+DEBUG util.py:594:   zlib-lib32                            x86_64  1.2.11.1.jtkv6.3-60      local   87 k
+DEBUG util.py:594:   zstd-lib32                            x86_64  1.4.5-60                 local  357 k
+DEBUG util.py:594:  Transaction Summary
+DEBUG util.py:594:  ====================================================================================
+DEBUG util.py:594:  Install  295 Packages
+DEBUG util.py:594:  Total size: 543 M
+DEBUG util.py:594:  Installed size: 1.7 G
+DEBUG util.py:594:  Downloading Packages:
+DEBUG util.py:594:  Running transaction check
+DEBUG util.py:594:  Transaction check succeeded.
+DEBUG util.py:594:  Running transaction test
+DEBUG util.py:594:  Transaction test succeeded.
+DEBUG util.py:594:  Running transaction
+DEBUG util.py:594:  New leaves:
+DEBUG util.py:594:    docbook-xml.x86_64
+DEBUG util.py:594:    gcc-dev32.x86_64
+DEBUG util.py:594:    glib-dev32.x86_64
+DEBUG util.py:594:    glibc-dev32.x86_64
+DEBUG util.py:594:    gobject-introspection-dev.x86_64
+DEBUG util.py:594:    gtk-doc-dev.x86_64
+DEBUG util.py:594:    libgudev-dev32.x86_64
+DEBUG util.py:594:    libmbim-dev.x86_64
+DEBUG util.py:594:    libqmi-dev.x86_64
+DEBUG util.py:594:    mobile-broadband-provider-info.x86_64
+DEBUG util.py:594:    perl-XML-Parser-perl.x86_64
+DEBUG util.py:594:    perl-XML-Parser.x86_64
+DEBUG util.py:594:    polkit-dev.x86_64
+DEBUG util.py:594:    systemd-dev32.x86_64
+DEBUG util.py:594:    vala.x86_64
+DEBUG util.py:594:  Installed:
+DEBUG util.py:594:    Linux-PAM-lib32-1.3.1-54.x86_64                                               
+DEBUG util.py:594:    Pygments-2.7.1-62.x86_64                                                      
+DEBUG util.py:594:    Pygments-bin-2.7.1-62.x86_64                                                  
+DEBUG util.py:594:    Pygments-license-2.7.1-62.x86_64                                              
+DEBUG util.py:594:    Pygments-python-2.7.1-62.x86_64                                               
+DEBUG util.py:594:    Pygments-python3-2.7.1-62.x86_64                                              
+DEBUG util.py:594:    Z3-lib-4.8.9-23.x86_64                                                        
+DEBUG util.py:594:    Z3-license-4.8.9-23.x86_64                                                    
+DEBUG util.py:594:    appdirs-1.4.4-50.x86_64                                                       
+DEBUG util.py:594:    appdirs-license-1.4.4-50.x86_64                                               
+DEBUG util.py:594:    appdirs-python-1.4.4-50.x86_64                                                
+DEBUG util.py:594:    appdirs-python3-1.4.4-50.x86_64                                               
+DEBUG util.py:594:    astroid-2.4.2-98.x86_64                                                       
+DEBUG util.py:594:    astroid-license-2.4.2-98.x86_64                                               
+DEBUG util.py:594:    astroid-python-2.4.2-98.x86_64                                                
+DEBUG util.py:594:    astroid-python3-2.4.2-98.x86_64                                               
+DEBUG util.py:594:    audit-lib-2.8.5-45.x86_64                                                     
+DEBUG util.py:594:    audit-license-2.8.5-45.x86_64                                                 
+DEBUG util.py:594:    cairo-lib-1.16.0-70.x86_64                                                    
+DEBUG util.py:594:    cairo-license-1.16.0-70.x86_64                                                
+DEBUG util.py:594:    certifi-2020.6.20-66.x86_64                                                   
+DEBUG util.py:594:    certifi-license-2020.6.20-66.x86_64                                           
+DEBUG util.py:594:    certifi-python-2020.6.20-66.x86_64                                            
+DEBUG util.py:594:    certifi-python3-2020.6.20-66.x86_64                                           
+DEBUG util.py:594:    colorama-0.4.3-65.x86_64                                                      
+DEBUG util.py:594:    colorama-license-0.4.3-65.x86_64                                              
+DEBUG util.py:594:    colorama-python-0.4.3-65.x86_64                                               
+DEBUG util.py:594:    colorama-python3-0.4.3-65.x86_64                                              
+DEBUG util.py:594:    compat-boost-soname1.73.0-1.73.0-1.x86_64                                     
+DEBUG util.py:594:    contextlib2-0.5.5-58.x86_64                                                   
+DEBUG util.py:594:    contextlib2-license-0.5.5-58.x86_64                                           
+DEBUG util.py:594:    contextlib2-python-0.5.5-58.x86_64                                            
+DEBUG util.py:594:    contextlib2-python3-0.5.5-58.x86_64                                           
+DEBUG util.py:594:    distlib-0.3.1-14.x86_64                                                       
+DEBUG util.py:594:    distlib-license-0.3.1-14.x86_64                                               
+DEBUG util.py:594:    distlib-python-0.3.1-14.x86_64                                                
+DEBUG util.py:594:    distlib-python3-0.3.1-14.x86_64                                               
+DEBUG util.py:594:    docbook-xml-4.5-25.x86_64                                                     
+DEBUG util.py:594:    filelock-3.0.12-14.x86_64                                                     
+DEBUG util.py:594:    filelock-license-3.0.12-14.x86_64                                             
+DEBUG util.py:594:    filelock-python-3.0.12-14.x86_64                                              
+DEBUG util.py:594:    filelock-python3-3.0.12-14.x86_64                                             
+DEBUG util.py:594:    fontconfig-data-2.13.1-43.x86_64                                              
+DEBUG util.py:594:    fontconfig-lib-2.13.1-43.x86_64                                               
+DEBUG util.py:594:    fontconfig-license-2.13.1-43.x86_64                                           
+DEBUG util.py:594:    freetype-lib-2.10.2-60.x86_64                                                 
+DEBUG util.py:594:    freetype-license-2.10.2-60.x86_64                                             
+DEBUG util.py:594:    gcc-dev32-10.2.0-992.x86_64                                                   
+DEBUG util.py:594:    gcc-libgcc32-10.2.0-992.x86_64                                                
+DEBUG util.py:594:    gcc-libstdc++32-10.2.0-992.x86_64                                             
+DEBUG util.py:594:    glib-2.64.6-120.x86_64                                                        
+DEBUG util.py:594:    glib-autostart-2.64.6-120.x86_64                                              
+DEBUG util.py:594:    glib-bin-2.64.6-120.x86_64                                                    
+DEBUG util.py:594:    glib-dev-2.64.6-120.x86_64                                                    
+DEBUG util.py:594:    glib-dev32-2.64.6-120.x86_64                                                  
+DEBUG util.py:594:    glib-lib32-2.64.6-120.x86_64                                                  
+DEBUG util.py:594:    glib-locales-2.64.6-120.x86_64                                                
+DEBUG util.py:594:    glib-services-2.64.6-120.x86_64                                               
+DEBUG util.py:594:    glibc-bin-2.31-342.x86_64                                                     
+DEBUG util.py:594:    glibc-dev32-2.31-342.x86_64                                                   
+DEBUG util.py:594:    glibc-libc32-2.31-342.x86_64                                                  
+DEBUG util.py:594:    gnutls-lib-3.6.15-67.x86_64                                                   
+DEBUG util.py:594:    gnutls-license-3.6.15-67.x86_64                                               
+DEBUG util.py:594:    gobject-introspection-1.66.1-38.x86_64                                        
+DEBUG util.py:594:    gobject-introspection-bin-1.66.1-38.x86_64                                    
+DEBUG util.py:594:    gobject-introspection-data-1.66.1-38.x86_64                                   
+DEBUG util.py:594:    gobject-introspection-dev-1.66.1-38.x86_64                                    
+DEBUG util.py:594:    gobject-introspection-lib-1.66.1-38.x86_64                                    
+DEBUG util.py:594:    gobject-introspection-license-1.66.1-38.x86_64                                
+DEBUG util.py:594:    gobject-introspection-man-1.66.1-38.x86_64                                    
+DEBUG util.py:594:    graphite-data-1.3.13-7.x86_64                                                 
+DEBUG util.py:594:    graphite-lib-1.3.13-7.x86_64                                                  
+DEBUG util.py:594:    graphite-license-1.3.13-7.x86_64                                              
+DEBUG util.py:594:    graphviz-data-2.44.1-40.x86_64                                                
+DEBUG util.py:594:    graphviz-lib-2.44.1-40.x86_64                                                 
+DEBUG util.py:594:    graphviz-license-2.44.1-40.x86_64                                             
+DEBUG util.py:594:    gtk-doc-1.32-40.x86_64                                                        
+DEBUG util.py:594:    gtk-doc-bin-1.32-40.x86_64                                                    
+DEBUG util.py:594:    gtk-doc-data-1.32-40.x86_64                                                   
+DEBUG util.py:594:    gtk-doc-dev-1.32-40.x86_64                                                    
+DEBUG util.py:594:    gtk-doc-license-1.32-40.x86_64                                                
+DEBUG util.py:594:    harfbuzz-data-2.6.7-104.x86_64                                                
+DEBUG util.py:594:    harfbuzz-lib-2.6.7-104.x86_64                                                 
+DEBUG util.py:594:    harfbuzz-license-2.6.7-104.x86_64                                             
+DEBUG util.py:594:    icu4c-data-67.1-24.x86_64                                                     
+DEBUG util.py:594:    icu4c-lib-67.1-24.x86_64                                                      
+DEBUG util.py:594:    icu4c-license-67.1-24.x86_64                                                  
+DEBUG util.py:594:    importlib_metadata-2.0.0-32.x86_64                                            
+DEBUG util.py:594:    importlib_metadata-license-2.0.0-32.x86_64                                    
+DEBUG util.py:594:    importlib_metadata-python-2.0.0-32.x86_64                                     
+DEBUG util.py:594:    importlib_metadata-python3-2.0.0-32.x86_64                                    
+DEBUG util.py:594:    isort-5.6.4-81.x86_64                                                         
+DEBUG util.py:594:    isort-bin-5.6.4-81.x86_64                                                     
+DEBUG util.py:594:    isort-license-5.6.4-81.x86_64                                                 
+DEBUG util.py:594:    isort-python-5.6.4-81.x86_64                                                  
+DEBUG util.py:594:    isort-python3-5.6.4-81.x86_64                                                 
+DEBUG util.py:594:    lazy-object-proxy-1.5.1-45.x86_64                                             
+DEBUG util.py:594:    lazy-object-proxy-license-1.5.1-45.x86_64                                     
+DEBUG util.py:594:    lazy-object-proxy-python-1.5.1-45.x86_64                                      
+DEBUG util.py:594:    lazy-object-proxy-python3-1.5.1-45.x86_64                                     
+DEBUG util.py:594:    libX11-lib-1.6.12-422.x86_64                                                  
+DEBUG util.py:594:    libXv-lib-1.0.11-16.x86_64                                                    
+DEBUG util.py:594:    libXv-license-1.0.11-16.x86_64                                                
+DEBUG util.py:594:    libXvMC-lib-1.0.11-18.x86_64                                                  
+DEBUG util.py:594:    libXvMC-license-1.0.11-18.x86_64                                              
+DEBUG util.py:594:    libcap-lib32-2.27-36.x86_64                                                   
+DEBUG util.py:594:    libcap-ng-lib-0.7.10-31.x86_64                                                
+DEBUG util.py:594:    libcap-ng-license-0.7.10-31.x86_64                                            
+DEBUG util.py:594:    libdrm-data-2.4.102-69.x86_64                                                 
+DEBUG util.py:594:    libdrm-lib-2.4.102-69.x86_64                                                  
+DEBUG util.py:594:    libffi-3.2.1-34.x86_64                                                        
+DEBUG util.py:594:    libffi-dev-3.2.1-34.x86_64                                                    
+DEBUG util.py:594:    libffi-info-3.2.1-34.x86_64                                                   
+DEBUG util.py:594:    libffi-lib32-3.2.1-34.x86_64                                                  
+DEBUG util.py:594:    libgudev-234-17.x86_64                                                        
+DEBUG util.py:594:    libgudev-data-234-17.x86_64                                                   
+DEBUG util.py:594:    libgudev-dev-234-17.x86_64                                                    
+DEBUG util.py:594:    libgudev-dev32-234-17.x86_64                                                  
+DEBUG util.py:594:    libgudev-lib-234-17.x86_64                                                    
+DEBUG util.py:594:    libgudev-lib32-234-17.x86_64                                                  
+DEBUG util.py:594:    libgudev-license-234-17.x86_64                                                
+DEBUG util.py:594:    libidn2-lib-2.3.0-8.x86_64                                                    
+DEBUG util.py:594:    libidn2-license-2.3.0-8.x86_64                                                
+DEBUG util.py:594:    libmbim-1.24.4-16.x86_64                                                      
+DEBUG util.py:594:    libmbim-bin-1.24.4-16.x86_64                                                  
+DEBUG util.py:594:    libmbim-data-1.24.4-16.x86_64                                                 
+DEBUG util.py:594:    libmbim-dev-1.24.4-16.x86_64                                                  
+DEBUG util.py:594:    libmbim-lib-1.24.4-16.x86_64                                                  
+DEBUG util.py:594:    libmbim-libexec-1.24.4-16.x86_64                                              
+DEBUG util.py:594:    libmbim-license-1.24.4-16.x86_64                                              
+DEBUG util.py:594:    libmbim-man-1.24.4-16.x86_64                                                  
+DEBUG util.py:594:    libpciaccess-lib-0.16-22.x86_64                                               
+DEBUG util.py:594:    libpciaccess-license-0.16-22.x86_64                                           
+DEBUG util.py:594:    libpng-lib-1.6.37-60.x86_64                                                   
+DEBUG util.py:594:    libpng-license-1.6.37-60.x86_64                                               
+DEBUG util.py:594:    libpwquality-lib-1.4.4-37.x86_64                                              
+DEBUG util.py:594:    libpwquality-license-1.4.4-37.x86_64                                          
+DEBUG util.py:594:    libqmi-1.26.6-21.x86_64                                                       
+DEBUG util.py:594:    libqmi-bin-1.26.6-21.x86_64                                                   
+DEBUG util.py:594:    libqmi-data-1.26.6-21.x86_64                                                  
+DEBUG util.py:594:    libqmi-dev-1.26.6-21.x86_64                                                   
+DEBUG util.py:594:    libqmi-lib-1.26.6-21.x86_64                                                   
+DEBUG util.py:594:    libqmi-libexec-1.26.6-21.x86_64                                               
+DEBUG util.py:594:    libqmi-license-1.26.6-21.x86_64                                               
+DEBUG util.py:594:    libqmi-man-1.26.6-21.x86_64                                                   
+DEBUG util.py:594:    libtasn1-lib32-4.13-35.x86_64                                                 
+DEBUG util.py:594:    libwebp-lib-1.1.0-30.x86_64                                                   
+DEBUG util.py:594:    libwebp-license-1.1.0-30.x86_64                                               
+DEBUG util.py:594:    libxslt-1.1.34-49.x86_64                                                      
+DEBUG util.py:594:    libxslt-bin-1.1.34-49.x86_64                                                  
+DEBUG util.py:594:    libxslt-lib-1.1.34-49.x86_64                                                  
+DEBUG util.py:594:    libxslt-license-1.1.34-49.x86_64                                              
+DEBUG util.py:594:    libxslt-man-1.1.34-49.x86_64                                                  
+DEBUG util.py:594:    llvm-extras-libclang-cpp-10.0.1-123.x86_64                                    
+DEBUG util.py:594:    llvm-extras-libllvm-10.0.1-123.x86_64                                         
+DEBUG util.py:594:    lz4-lib32-1.9.2-29.x86_64                                                     
+DEBUG util.py:594:    mccabe-0.6.1-53.x86_64                                                        
+DEBUG util.py:594:    mccabe-license-0.6.1-53.x86_64                                                
+DEBUG util.py:594:    mccabe-python-0.6.1-53.x86_64                                                 
+DEBUG util.py:594:    mccabe-python3-0.6.1-53.x86_64                                                
+DEBUG util.py:594:    mesa-data-20.1+3492.400c2ff226-251.x86_64                                     
+DEBUG util.py:594:    mesa-lib-20.1+3492.400c2ff226-251.x86_64                                      
+DEBUG util.py:594:    mesa-license-20.1+3492.400c2ff226-251.x86_64                                  
+DEBUG util.py:594:    mobile-broadband-provider-info-20190618-4.x86_64                              
+DEBUG util.py:594:    mobile-broadband-provider-info-data-20190618-4.x86_64                         
+DEBUG util.py:594:    mozjs78-lib-78.3.0-6.x86_64                                                   
+DEBUG util.py:594:    nettle-lib-3.6-44.x86_64                                                      
+DEBUG util.py:594:    nettle-license-3.6-44.x86_64                                                  
+DEBUG util.py:594:    p11-kit-lib32-0.23.15-55.x86_64                                               
+DEBUG util.py:594:    packaging-20.4-43.x86_64                                                      
+DEBUG util.py:594:    packaging-license-20.4-43.x86_64                                              
+DEBUG util.py:594:    packaging-python-20.4-43.x86_64                                               
+DEBUG util.py:594:    packaging-python3-20.4-43.x86_64                                              
+DEBUG util.py:594:    pathlib2-2.3.5-15.x86_64                                                      
+DEBUG util.py:594:    pathlib2-license-2.3.5-15.x86_64                                              
+DEBUG util.py:594:    pathlib2-python-2.3.5-15.x86_64                                               
+DEBUG util.py:594:    pathlib2-python3-2.3.5-15.x86_64                                              
+DEBUG util.py:594:    pcre-8.44-57.x86_64                                                           
+DEBUG util.py:594:    pcre-bin-8.44-57.x86_64                                                       
+DEBUG util.py:594:    pcre-dev-8.44-57.x86_64                                                       
+DEBUG util.py:594:    pcre-extras-8.44-57.x86_64                                                    
+DEBUG util.py:594:    pcre-lib32-8.44-57.x86_64                                                     
+DEBUG util.py:594:    pcre-man-8.44-57.x86_64                                                       
+DEBUG util.py:594:    perl-XML-Parser-2.46-40.x86_64                                                
+DEBUG util.py:594:    perl-XML-Parser-perl-2.46-40.x86_64                                           
+DEBUG util.py:594:    pip-20.2.3-100.x86_64                                                         
+DEBUG util.py:594:    pip-bin-20.2.3-100.x86_64                                                     
+DEBUG util.py:594:    pip-license-20.2.3-100.x86_64                                                 
+DEBUG util.py:594:    pip-python-20.2.3-100.x86_64                                                  
+DEBUG util.py:594:    pip-python3-20.2.3-100.x86_64                                                 
+DEBUG util.py:594:    pixman-lib-0.38.4-37.x86_64                                                   
+DEBUG util.py:594:    pixman-license-0.38.4-37.x86_64                                               
+DEBUG util.py:594:    pluggy-0.13.1-63.x86_64                                                       
+DEBUG util.py:594:    pluggy-license-0.13.1-63.x86_64                                               
+DEBUG util.py:594:    pluggy-python-0.13.1-63.x86_64                                                
+DEBUG util.py:594:    pluggy-python3-0.13.1-63.x86_64                                               
+DEBUG util.py:594:    polkit-0.118-22.x86_64                                                        
+DEBUG util.py:594:    polkit-bin-0.118-22.x86_64                                                    
+DEBUG util.py:594:    polkit-data-0.118-22.x86_64                                                   
+DEBUG util.py:594:    polkit-dev-0.118-22.x86_64                                                    
+DEBUG util.py:594:    polkit-lib-0.118-22.x86_64                                                    
+DEBUG util.py:594:    polkit-license-0.118-22.x86_64                                                
+DEBUG util.py:594:    polkit-locales-0.118-22.x86_64                                                
+DEBUG util.py:594:    polkit-services-0.118-22.x86_64                                               
+DEBUG util.py:594:    py-1.9.0-74.x86_64                                                            
+DEBUG util.py:594:    py-license-1.9.0-74.x86_64                                                    
+DEBUG util.py:594:    py-python-1.9.0-74.x86_64                                                     
+DEBUG util.py:594:    py-python3-1.9.0-74.x86_64                                                    
+DEBUG util.py:594:    pyflakes-2.2.0-69.x86_64                                                      
+DEBUG util.py:594:    pyflakes-bin-2.2.0-69.x86_64                                                  
+DEBUG util.py:594:    pyflakes-license-2.2.0-69.x86_64                                              
+DEBUG util.py:594:    pyflakes-python-2.2.0-69.x86_64                                               
+DEBUG util.py:594:    pyflakes-python3-2.2.0-69.x86_64                                              
+DEBUG util.py:594:    pylint-2.5.3-84.x86_64                                                        
+DEBUG util.py:594:    pylint-bin-2.5.3-84.x86_64                                                    
+DEBUG util.py:594:    pylint-license-2.5.3-84.x86_64                                                
+DEBUG util.py:594:    pylint-python-2.5.3-84.x86_64                                                 
+DEBUG util.py:594:    pylint-python3-2.5.3-84.x86_64                                                
+DEBUG util.py:594:    pyparsing-2.4.7-78.x86_64                                                     
+DEBUG util.py:594:    pyparsing-license-2.4.7-78.x86_64                                             
+DEBUG util.py:594:    pyparsing-python-2.4.7-78.x86_64                                              
+DEBUG util.py:594:    pyparsing-python3-2.4.7-78.x86_64                                             
+DEBUG util.py:594:    setuptools-50.3.0-184.x86_64                                                  
+DEBUG util.py:594:    setuptools-python-50.3.0-184.x86_64                                           
+DEBUG util.py:594:    six-1.15.0-66.x86_64                                                          
+DEBUG util.py:594:    six-license-1.15.0-66.x86_64                                                  
+DEBUG util.py:594:    six-python-1.15.0-66.x86_64                                                   
+DEBUG util.py:594:    six-python3-1.15.0-66.x86_64                                                  
+DEBUG util.py:594:    source-highlight-3.1.9-38.x86_64                                              
+DEBUG util.py:594:    source-highlight-bin-3.1.9-38.x86_64                                          
+DEBUG util.py:594:    source-highlight-data-3.1.9-38.x86_64                                         
+DEBUG util.py:594:    source-highlight-info-3.1.9-38.x86_64                                         
+DEBUG util.py:594:    source-highlight-lib-3.1.9-38.x86_64                                          
+DEBUG util.py:594:    source-highlight-license-3.1.9-38.x86_64                                      
+DEBUG util.py:594:    source-highlight-man-3.1.9-38.x86_64                                          
+DEBUG util.py:594:    systemd-246.4-282.x86_64                                                      
+DEBUG util.py:594:    systemd-autostart-246.4-282.x86_64                                            
+DEBUG util.py:594:    systemd-bin-246.4-282.x86_64                                                  
+DEBUG util.py:594:    systemd-config-246.4-282.x86_64                                               
+DEBUG util.py:594:    systemd-dev-246.4-282.x86_64                                                  
+DEBUG util.py:594:    systemd-dev32-246.4-282.x86_64                                                
+DEBUG util.py:594:    systemd-lib32-246.4-282.x86_64                                                
+DEBUG util.py:594:    systemd-locales-246.4-282.x86_64                                              
+DEBUG util.py:594:    systemd-man-246.4-282.x86_64                                                  
+DEBUG util.py:594:    systemd-services-246.4-282.x86_64                                             
+DEBUG util.py:594:    tcl-bin-8.6.10-50.x86_64                                                      
+DEBUG util.py:594:    tcl-lib-8.6.10-50.x86_64                                                      
+DEBUG util.py:594:    tcl-license-8.6.10-50.x86_64                                                  
+DEBUG util.py:594:    toml-0.10.1-11.x86_64                                                         
+DEBUG util.py:594:    toml-python-0.10.1-11.x86_64                                                  
+DEBUG util.py:594:    toml-python3-0.10.1-11.x86_64                                                 
+DEBUG util.py:594:    tox-3.20.1-111.x86_64                                                         
+DEBUG util.py:594:    tox-bin-3.20.1-111.x86_64                                                     
+DEBUG util.py:594:    tox-license-3.20.1-111.x86_64                                                 
+DEBUG util.py:594:    tox-python-3.20.1-111.x86_64                                                  
+DEBUG util.py:594:    tox-python3-3.20.1-111.x86_64                                                 
+DEBUG util.py:594:    typed_ast-1.4.1-32.x86_64                                                     
+DEBUG util.py:594:    typed_ast-license-1.4.1-32.x86_64                                             
+DEBUG util.py:594:    typed_ast-python-1.4.1-32.x86_64                                              
+DEBUG util.py:594:    typed_ast-python3-1.4.1-32.x86_64                                             
+DEBUG util.py:594:    util-linux-2.36-155.x86_64                                                    
+DEBUG util.py:594:    util-linux-autostart-2.36-155.x86_64                                          
+DEBUG util.py:594:    util-linux-bin-2.36-155.x86_64                                                
+DEBUG util.py:594:    util-linux-dev-2.36-155.x86_64                                                
+DEBUG util.py:594:    util-linux-lib32-2.36-155.x86_64                                              
+DEBUG util.py:594:    util-linux-locales-2.36-155.x86_64                                            
+DEBUG util.py:594:    util-linux-man-2.36-155.x86_64                                                
+DEBUG util.py:594:    util-linux-services-2.36-155.x86_64                                           
+DEBUG util.py:594:    util-linux-setuid-2.36-155.x86_64                                             
+DEBUG util.py:594:    vala-0.50.1-44.x86_64                                                         
+DEBUG util.py:594:    vala-bin-0.50.1-44.x86_64                                                     
+DEBUG util.py:594:    vala-data-0.50.1-44.x86_64                                                    
+DEBUG util.py:594:    vala-lib-0.50.1-44.x86_64                                                     
+DEBUG util.py:594:    vala-license-0.50.1-44.x86_64                                                 
+DEBUG util.py:594:    vala-man-0.50.1-44.x86_64                                                     
+DEBUG util.py:594:    virtualenv-20.0.34-115.x86_64                                                 
+DEBUG util.py:594:    virtualenv-bin-20.0.34-115.x86_64                                             
+DEBUG util.py:594:    virtualenv-license-20.0.34-115.x86_64                                         
+DEBUG util.py:594:    virtualenv-python-20.0.34-115.x86_64                                          
+DEBUG util.py:594:    virtualenv-python3-20.0.34-115.x86_64                                         
+DEBUG util.py:594:    wayland-data-1.18.0-25.x86_64                                                 
+DEBUG util.py:594:    wayland-lib-1.18.0-25.x86_64                                                  
+DEBUG util.py:594:    wayland-license-1.18.0-25.x86_64                                              
+DEBUG util.py:594:    wrapt-1.11.2-49.x86_64                                                        
+DEBUG util.py:594:    wrapt-license-1.11.2-49.x86_64                                                
+DEBUG util.py:594:    wrapt-python-1.11.2-49.x86_64                                                 
+DEBUG util.py:594:    wrapt-python3-1.11.2-49.x86_64                                                
+DEBUG util.py:594:    zipp-3.3.0-18.x86_64                                                          
+DEBUG util.py:594:    zipp-license-3.3.0-18.x86_64                                                  
+DEBUG util.py:594:    zipp-python-3.3.0-18.x86_64                                                   
+DEBUG util.py:594:    zipp-python3-3.3.0-18.x86_64                                                  
+DEBUG util.py:594:    zlib-1.2.11.1.jtkv6.3-60.x86_64                                               
+DEBUG util.py:594:    zlib-dev-1.2.11.1.jtkv6.3-60.x86_64                                           
+DEBUG util.py:594:    zlib-lib32-1.2.11.1.jtkv6.3-60.x86_64                                         
+DEBUG util.py:594:    zstd-lib32-1.4.5-60.x86_64                                                    
+DEBUG util.py:594:  Complete!
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/clear-ModemManager/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:682:  Using nspawn with args None
+DEBUG util.py:685:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'aba7d1a6976541a18a692d058db15178', '-D', '/var/lib/mock/clear-ModemManager/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=en_US.UTF-8', '--setenv=CCACHE_DIR=/var/tmp/ccache', '--setenv=CCACHE_UMASK=002', 'ccache', '-M', '4G'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'CCACHE_DIR': '/var/tmp/ccache', 'CCACHE_UMASK': '002'} and shell False
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:594:  Set cache size limit to 4.0 GB
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: rpm -qa --root '/var/lib/mock/clear-ModemManager/root' --qf '%{nevra} %{buildtime} %{size} %{pkgid} installed\n' > results//installed_pkgs.log with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'en_US.UTF-8', 'CCACHE_DIR': '/var/tmp/ccache', 'CCACHE_UMASK': '002'} and shell True
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:423:  Unsharing. Flags: 1073741824
+DEBUG util.py:423:  Unsharing. Flags: 134217728
+DEBUG util.py:325:  kill orphans
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/clear-ModemManager/root/var/tmp/ccache'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0
+DEBUG util.py:759:  child environment: None
+DEBUG util.py:685:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/clear-ModemManager/root/var/cache/dnf/'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'en_US.UTF-8'} and shell False
+DEBUG util.py:740:  Child return code was: 0

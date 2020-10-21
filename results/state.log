@@ -1,0 +1,43 @@
+2020-10-17 07:27:26,096 - Mock Version: 1.4.21
+2020-10-17 07:27:28,002 - Start: dnf update
+2020-10-17 07:27:54,677 - Finish: dnf update
+2020-10-17 07:27:54,689 - Finish: chroot init
+2020-10-17 07:27:54,695 - Start: buildsrpm
+2020-10-17 07:27:54,753 - Start: rpmbuild -bs
+2020-10-17 07:27:55,004 - Finish: rpmbuild -bs
+2020-10-17 07:27:55,010 - Finish: buildsrpm
+2020-10-17 07:27:55,011 - Finish: run
+2020-10-17 07:28:02,860 - Mock Version: 1.4.21
+2020-10-17 07:28:05,306 - Start: dnf update
+2020-10-17 07:28:27,364 - Finish: dnf update
+2020-10-17 07:28:27,377 - Finish: chroot init
+2020-10-17 07:28:27,379 - Start: build phase for ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:28:27,381 - Start: build setup for ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:29:25,497 - Finish: build setup for ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:29:25,616 - Start: Outputting list of installed packages
+2020-10-17 07:29:25,793 - Finish: Outputting list of installed packages
+2020-10-17 07:29:25,793 - Start: rpmbuild ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:32:30,965 - Finish: rpmbuild ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:32:30,965 - Finish: build phase for ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:32:42,647 - Mock Version: 1.4.21
+2020-10-17 07:32:45,080 - Start: dnf update
+2020-10-17 07:33:07,514 - Finish: dnf update
+2020-10-17 07:33:07,527 - Finish: chroot init
+2020-10-17 07:33:07,532 - Start: buildsrpm
+2020-10-17 07:33:07,610 - Start: rpmbuild -bs
+2020-10-17 07:33:07,870 - Finish: rpmbuild -bs
+2020-10-17 07:33:07,876 - Finish: buildsrpm
+2020-10-17 07:33:07,878 - Finish: run
+2020-10-17 07:33:15,521 - Mock Version: 1.4.21
+2020-10-17 07:33:17,954 - Start: dnf update
+2020-10-17 07:33:39,955 - Finish: dnf update
+2020-10-17 07:33:39,967 - Finish: chroot init
+2020-10-17 07:33:39,970 - Start: build phase for ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:33:39,972 - Start: build setup for ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:34:37,061 - Finish: build setup for ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:34:37,175 - Start: Outputting list of installed packages
+2020-10-17 07:34:37,367 - Finish: Outputting list of installed packages
+2020-10-17 07:34:37,368 - Start: rpmbuild ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:37:44,228 - Finish: rpmbuild ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:37:44,258 - Finish: build phase for ModemManager-1.12.8-32.src.rpm
+2020-10-17 07:37:44,262 - Finish: run

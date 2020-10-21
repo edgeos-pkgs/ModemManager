@@ -1,0 +1,35 @@
+INFO: mock.py version 1.4.21 starting (python version = 3.8.6)...
+Start: init plugins
+INFO: selinux disabled
+Finish: init plugins
+INFO: Signal handler active
+Start: run
+INFO: Start(results/ModemManager-1.12.8-32.src.rpm)  Config(clear)
+Start: clean chroot
+Finish: clean chroot
+Start: chroot init
+INFO: calling preinit hooks
+INFO: enabled root cache
+Start: unpacking root cache
+Finish: unpacking root cache
+INFO: enabled dnf cache
+Start: cleaning dnf metadata
+Finish: cleaning dnf metadata
+INFO: enabled ccache
+INFO: enabled HW Info plugin
+Mock Version: 1.4.21
+INFO: Mock Version: 1.4.21
+Start: dnf update
+Finish: dnf update
+Finish: chroot init
+Start: build phase for ModemManager-1.12.8-32.src.rpm
+Start: build setup for ModemManager-1.12.8-32.src.rpm
+Finish: build setup for ModemManager-1.12.8-32.src.rpm
+Start: Outputting list of installed packages
+Finish: Outputting list of installed packages
+Start: rpmbuild ModemManager-1.12.8-32.src.rpm
+Finish: rpmbuild ModemManager-1.12.8-32.src.rpm
+Finish: build phase for ModemManager-1.12.8-32.src.rpm
+INFO: Done(results/ModemManager-1.12.8-32.src.rpm) Config(clear) 4 minutes 35 seconds
+INFO: Results and/or logs in: results/
+Finish: run
